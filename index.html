@@ -20,6 +20,7 @@ if (closeit == true) {
 	 document.getElementById('ordernowwindow').style.display='none';
 	 document.getElementById('opencartwindow').style.display='none';
 	 document.getElementById('blur').className = 'lessblur';
+	 document.getElementById('blur2').className = 'lessblur';
 	 localStorage.clear();
 	 
 } else {
@@ -30,7 +31,9 @@ if (closeit == true) {
 function opencartwindow() {
 	
 	$("html, body").animate({ scrollTop: 0 }, "slow");
+	
 	document.getElementById('blur').className = 'blur';
+	document.getElementById('blur').className = 'blur2';
 	
 	document.getElementById('opencartwindow').style.display='block';
 	
@@ -125,7 +128,9 @@ function opencartwindow() {
 function closecartwindow() {
 	
 	$("html, body").animate({ scrollTop: 0 }, "slow");
+	
 	document.getElementById('blur').className = 'lessblur';
+	document.getElementById('blur2').className = 'lessblur';
 	
 	document.getElementById('opencartwindow').style.display='none';
 	
@@ -189,45 +194,127 @@ $( "#page" ).load(loadthis+".html");
 <div class="titleincartwindow">Summary:</div>
 
 <div id="summaryboxes">
+
+<table border="0" width="100%">
+  <tr>
+    <td>
+
 <div class="animated fadeIn andel1" id="product1"></div>
 <div class="animated fadeIn andel1"><span id="size1"></span> </div>
 <div class="animated fadeIn andel1"><span id="price1"></span> </div>
+
+    </td>
+  </tr>
+</table>
+
+<table border="0" width="100%">
+  <tr>
+    <td>
 
 <div class="animated fadeIn andel2" id="product2"></div>
 <div class="animated fadeIn andel2"><span id="size2"></span> </div>
 <div class="animated fadeIn andel2"><span id="price2"></span> </div>
 
+    </td>
+  </tr>
+</table>
+
+<table border="0" width="100%">
+  <tr>
+    <td>
+
 <div class="animated fadeIn andel3" id="product3"></div>
 <div class="animated fadeIn andel3"><span id="size3"></span> </div>
 <div class="animated fadeIn andel3"><span id="price3"></span> </div>
+
+    </td>
+  </tr>
+</table>
+
+<table border="0" width="100%">
+  <tr>
+    <td>
 
 <div class="animated fadeIn andel4" id="product4"></div>
 <div class="animated fadeIn andel4"><span id="size4"></span> </div>
 <div class="animated fadeIn andel4"><span id="price4"></span> </div>
 
+    </td>
+  </tr>
+</table>
+
+<table border="0" width="100%">
+  <tr>
+    <td>
+
 <div class="animated fadeIn andel5" id="product5"></div>
 <div class="animated fadeIn andel5"><span id="size5"></span> </div>
 <div class="animated fadeIn andel5"><span id="price5"></span> </div>
+
+    </td>
+  </tr>
+</table>
+
+<table border="0" width="100%">
+  <tr>
+    <td>
 
 <div class="animated fadeIn andel6" id="product6"></div>
 <div class="animated fadeIn andel6"><span id="size6"></span> </div>
 <div class="animated fadeIn andel6"><span id="price6"></span> </div>
 
+    </td>
+  </tr>
+</table>
+
+<table border="0" width="100%">
+  <tr>
+    <td>
+
 <div class="animated fadeIn andel7" id="product7"></div>
 <div class="animated fadeIn andel7"><span id="size7"></span> </div>
 <div class="animated fadeIn andel7"><span id="price7"></span> </div>
+
+    </td>
+  </tr>
+</table>
+
+<table border="0" width="100%">
+  <tr>
+    <td>
 
 <div class="animated fadeIn andel8" id="product8"></div>
 <div class="animated fadeIn andel8"><span id="size8"></span> </div>
 <div class="animated fadeIn andel8"><span id="price8"></span> </div>
 
+    </td>
+  </tr>
+</table>
+
+<table border="0" width="100%">
+  <tr>
+    <td>
+
 <div class="animated fadeIn andel9" id="product9"></div>
 <div class="animated fadeIn andel9"><span id="size9"></span> </div>
 <div class="animated fadeIn andel9"><span id="price9"></span> </div>
 
+    </td>
+  </tr>
+</table>
+
+<table border="0" width="100%">
+  <tr>
+    <td>
+
 <div class="animated fadeIn andel10" id="product10"></div>
 <div class="animated fadeIn andel10"><span id="size10"></span> </div>
 <div class="animated fadeIn andel10"><span id="price10"></span> </div>
+
+    </td>
+  </tr>
+</table>
+
 
 </div>
 <div style="clear:both"></div>
@@ -288,6 +375,7 @@ $( "#page" ).load(loadthis+".html");
     localStorage.setItem('price', '250');
     opencartwindow();
     ">
+
 </div>
 
 <h1 class="logotext animated fadeIn" style="-webkit-animation-delay: 3s;">AlcoDrop 24/7</h1>
