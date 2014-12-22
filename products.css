@@ -3,6 +3,16 @@ table {
 	background-color: #FFF;
 	margin-bottom: 10px;
 }
+.addtocart {
+	color: #FFF;
+	background-color: #000;
+	text-align: center;
+	width: 100%;
+	padding-top: 6px;
+	padding-bottom: 6px;
+	max-width:400px;
+}
+
 table td {
 	width: 33%;
 	text-align: center;

@@ -12,6 +12,10 @@
 
 <script>
 
+function opencartwindow() {
+	document.getElementById('opencartwindow').style.display='block';
+}
+
 $.ajaxSetup({
     beforeSend:function(){
         // show gif here, eg:
@@ -63,6 +67,10 @@ $( "#page" ).load(loadthis+".html");
 <option value="p9">LOCAL CANES/BRANDY/WHISKIES</option>
 <option value="p10">ENERGY DRINKS</option>
 </select>
+</div>
+
+<div id="opencartwindow">
+
 </div>
 
 <div id="page">
