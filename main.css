@@ -53,6 +53,15 @@ body {
 	margin-top: 5px;
 	margin-bottom: 5px;
 }
+#ordernowwindow {
+	background-color: #FFF;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	z-index: 100;
+	display: none;
+}
+
 
 #spinner {
 	background-image: url(282.gif);
