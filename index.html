@@ -13,11 +13,25 @@
 <script>
 
 function opencartwindow() {
+	
+	$("html, body").animate({ scrollTop: 0 }, "slow");
+	document.getElementById('blur').className = 'blur';
+	
 	document.getElementById('opencartwindow').style.display='block';
 	
 	document.getElementById('product').innerHTML = localStorage.getItem('product');
 	document.getElementById('size').innerHTML = localStorage.getItem('size');
 	document.getElementById('price').innerHTML = localStorage.getItem('price');
+	
+}
+
+function closecartwindow() {
+	
+	$("html, body").animate({ scrollTop: 0 }, "slow");
+	document.getElementById('blur').className = 'lessblur';
+	
+	document.getElementById('opencartwindow').style.display='none';
+	
 }
 
 $.ajaxSetup({
@@ -56,6 +70,17 @@ $( "#page" ).load(loadthis+".html");
 <div id="spinner"></div>
 </div>
 
+<div id="opencartwindow">
+Product added:
+<div class="listproduct" id="product"></div>
+<div class="listproduct"><span id="size"></span> ML</div>
+<div class="listproduct"><span id="price"></span> KES</div>
+<div class="opencartwindowbutton">Order now!</div>
+<div class="opencartwindowbutton" onClick="closecartwindow();">Continue Shopping</div>
+</div>
+
+<div id="blur">
+
 <div id="navigation">
 <h1>AlcoDrop 24/7</h1>
 <select id="mainmenu">
@@ -73,14 +98,7 @@ $( "#page" ).load(loadthis+".html");
 </select>
 </div>
 
-<div id="opencartwindow">
-Product added:
-<div class="listproduct" id="product"></div>
-<div class="listproduct" id="size"></div>
-<div class="listproduct" id="price"></div>
-<div class="opencartwindowbutton">Order now!</div>
-<div class="opencartwindowbutton">Continue Shopping</div>
-</div>
+
 
 <div id="page">
 
@@ -93,6 +111,8 @@ Product added:
 <h1 class="logotextsmall animated fadeIn" style="-webkit-animation-delay: 4s;">
 You Order.<br>We Delivery.<br>You Enjoy!
 </h1>
+
+</div>
 
 </div>
 
