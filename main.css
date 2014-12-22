@@ -37,6 +37,13 @@ body {
 	top: 170px;
 	display: none;
 }
+.listproduct {
+	text-align: center;
+	width: 100%;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
 #spinner {
 	background-image: url(282.gif);
 	background-repeat: no-repeat;
@@ -52,6 +59,17 @@ body {
 	padding-top: 10px;
 	padding-bottom: 10px;
 }
+.opencartwindowbutton {
+	color: #FFF;
+	background-color: #999;
+	text-align: center;
+	width: 100%;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	padding-top: 6px;
+	padding-bottom: 6px;
+}
+
 #navigation {
 	background-color: #FFF;
 	height: 40px;

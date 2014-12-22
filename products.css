@@ -7,10 +7,10 @@ table {
 	color: #FFF;
 	background-color: #000;
 	text-align: center;
-	width: 100%;
-	padding-top: 6px;
-	padding-bottom: 6px;
-	max-width:400px;
+	width: 110px;
+	max-width: 400px;
+	padding: 6px;
+	margin-right: 10px;
 }
 
 table td {

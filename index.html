@@ -14,6 +14,10 @@
 
 function opencartwindow() {
 	document.getElementById('opencartwindow').style.display='block';
+	
+	document.getElementById('product').innerHTML = localStorage.getItem('product');
+	document.getElementById('size').innerHTML = localStorage.getItem('size');
+	document.getElementById('price').innerHTML = localStorage.getItem('price');
 }
 
 $.ajaxSetup({
@@ -70,7 +74,12 @@ $( "#page" ).load(loadthis+".html");
 </div>
 
 <div id="opencartwindow">
-
+Product added:
+<div class="listproduct" id="product"></div>
+<div class="listproduct" id="size"></div>
+<div class="listproduct" id="price"></div>
+<div class="opencartwindowbutton">Order now!</div>
+<div class="opencartwindowbutton">Continue Shopping</div>
 </div>
 
 <div id="page">
