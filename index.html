@@ -12,6 +12,18 @@
 
 <script>
 
+function clearcheckout() {
+	var closeit = confirm("Are you sure you want to clear your Shopping Cart?");
+if (closeit == true) {
+	
+  	 $("html, body").animate({ scrollTop: 0 }, "slow");
+	 document.getElementById('ordernowwindow').style.display='none';
+	 
+} else {
+   
+}
+}
+
 function opencartwindow() {
 	
 	$("html, body").animate({ scrollTop: 0 }, "slow");
@@ -22,6 +34,17 @@ function opencartwindow() {
 	document.getElementById('product').innerHTML = localStorage.getItem('product');
 	document.getElementById('size').innerHTML = localStorage.getItem('size');
 	document.getElementById('price').innerHTML = localStorage.getItem('price');
+	
+	var oldtotal = parseInt(document.getElementById('totalammount').innerHTML);
+	
+	var addtototal = parseInt(localStorage.getItem('price'));
+	
+	var currentotal = oldtotal + addtototal;
+	
+	// alert(currentotal);
+	
+	document.getElementById('totalammount').innerHTML = currentotal;
+	document.getElementById('totalammount2').innerHTML = currentotal;
 	
 	var addedtocartnumber = document.getElementById('addedtocartnumber').innerHTML;
 	
@@ -206,11 +229,15 @@ $( "#page" ).load(loadthis+".html");
 </div>
 <div style="clear:both"></div>
 
+<div id="totalorder">Total: <span id="totalammount2">0</span>.00 KES</div>
+
+<div style="clear:both"></div>
+
 <div class="opencartwindowbutton" onClick="">Checkout</div>
 
-<div class="opencartwindowbutton" onClick="">Clear Shopping Cart</div>
+<div class="opencartwindowbutton" onClick="clearcheckout()">Clear Shopping Cart</div>
 
-<div class="opencartwindowbutton" onClick="closeorderwindow();">Close</div>
+<div class="opencartwindowbutton" onClick="closeorderwindow();">Continue Shopping</div>
 
 </div>
 
@@ -221,6 +248,7 @@ $( "#page" ).load(loadthis+".html");
 <div class="listproduct"><span id="price"></span> KES</div>
 <br>
 <div class="titleincartwindow">Products in Cart: <span id="addedtocartnumber">0</span></div>
+<div>Total: <span id="totalammount">0</span>.00 KES</div>
 <div class="opencartwindowbutton" onClick="openorderwindow();">Order now!</div>
 <div class="opencartwindowbutton" onClick="closecartwindow();">Continue Shopping</div>
 </div>

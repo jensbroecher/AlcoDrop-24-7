@@ -33,6 +33,13 @@ body {
 #summaryboxes {
 	margin-top: 5px;
 }
+#totalorder {
+	float: right;
+	margin-top: 5px;
+	margin-right: 5px;
+	margin-bottom: 5px;
+}
+
 
 .lessblur {
 	-webkit-filter: blur(0px);
