@@ -11,12 +11,10 @@ body {
 }
 .blur {
 	-webkit-filter: blur(5px);
-	transition: all 1s;
 	pointer-events: none;
 }
 .lessblur {
 	-webkit-filter: blur(0px);
-	transition: all 1s;
 	pointer-events: all;
 }
 .logotext {
@@ -87,7 +85,7 @@ body {
 	margin-bottom: 8px;
 	padding-top: 8px;
 	padding-bottom: 8px;
-	position: fixed;
+	position: absolute;
 	z-index: 10;
 }
 
