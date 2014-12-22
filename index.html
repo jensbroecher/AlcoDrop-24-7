@@ -62,8 +62,9 @@ function clearall() {
 	document.getElementById('size10').innerHTML = '';
 	document.getElementById('price10').innerHTML = '';
 	
-	document.getElementById('totalammount').innerHTML = '';
-	document.getElementById('totalammount2').innerHTML = '';
+	document.getElementById('totalammount').innerHTML = 0;
+	document.getElementById('totalammount2').innerHTML = 0;
+	document.getElementById('addedtocartnumber').innerHTML = 0;
 }
 
 function clearcheckout() {
@@ -79,6 +80,8 @@ if (closeit == true) {
 	 document.getElementById('opencartwindow').style.display='none';
 	 
 	 document.getElementById('page').className = 'lessblur';
+	 
+	 document.getElementById('page').style.display='block';
 	 
 	 // window.location.reload();
 	 

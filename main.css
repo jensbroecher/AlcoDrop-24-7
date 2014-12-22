@@ -51,11 +51,9 @@ body {
 	margin-right: 10px;
 	margin-bottom: 5px;
 }
-
-
 .lessblur {
 	-webkit-filter: blur(0px);
-	pointer-events: all;
+	pointer-events: all !important;
 }
 .logotext {
 	font-family: sans-serif;
