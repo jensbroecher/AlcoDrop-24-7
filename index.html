@@ -17,11 +17,20 @@ function clearcheckout() {
 if (closeit == true) {
 	
   	 $("html, body").animate({ scrollTop: 0 }, "slow");
+	 
+	 localStorage.clear();
+	 
+	 function cleanLocalStorage() {
+    for(key in localStorage) {
+        delete localStorage[key];
+    }
+}
 	 document.getElementById('ordernowwindow').style.display='none';
 	 document.getElementById('opencartwindow').style.display='none';
 	 document.getElementById('blur').className = 'lessblur';
 	 document.getElementById('blur2').className = 'lessblur';
-	 window.localStorage.clear();
+	 
+	 
 	 
 } else {
    
@@ -119,7 +128,7 @@ function opencartwindow() {
 	document.getElementById('price10').innerHTML = localStorage.getItem('price') + ' KES';
 	}
 	else {
-		alert('Maximum Number of Products reached! Please Order now');
+		alert('Maximum number of products reached! Please order now');
 		document.getElementById('addedtocartnumber').innerHTML=10;
 	}
 	
@@ -130,7 +139,6 @@ function closecartwindow() {
 	$("html, body").animate({ scrollTop: 0 }, "slow");
 	
 	document.getElementById('blur').className = 'lessblur';
-	document.getElementById('blur2').className = 'lessblur';
 	
 	document.getElementById('opencartwindow').style.display='none';
 	
@@ -332,16 +340,22 @@ $( "#page" ).load(loadthis+".html");
 
 <div class="opencartwindowbutton2" onClick="closeorderwindow();">Continue Shopping</div>
 
+<br><br>
+
 </div>
 
 <div id="opencartwindow">
 <div class="titleincartwindow">Product added:</div>
-<div class="listproduct" id="product"></div>
+<div class="listallproducts listproduct" id="product"></div>
 <div class="listproduct"><span id="size"></span> ML</div>
 <div class="listproduct"><span id="price"></span> KES</div>
 <br>
 <div class="titleincartwindow">Products in Cart: <span id="addedtocartnumber">0</span></div>
-<div>Total: <span id="totalammount">0</span>.00 KES</div>
+
+<div id="summarycartwindow">Total: <span id="totalammount">0</span>.00 KES</div>
+
+<div style="clear:both"></div>
+
 <div class="opencartwindowbutton" onClick="openorderwindow();">Order now!</div>
 <div class="opencartwindowbutton" onClick="closecartwindow();">Continue Shopping</div>
 </div>

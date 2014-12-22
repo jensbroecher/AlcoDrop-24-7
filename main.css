@@ -29,14 +29,26 @@ body {
 	padding-top: 4px;
 	padding-bottom: 4px;
 	overflow: hidden;
+	font-size: 12px;
+	font-weight: bold;
 }
+#summarycartwindow {
+	margin-top: 7px;
+	margin-bottom: 5px;
+	text-align: center;
+}
+.listallproducts {
+	padding-top: 3px;
+}
+
+
 #summaryboxes {
 	margin-top: 5px;
 }
 #totalorder {
 	float: right;
 	margin-top: 5px;
-	margin-right: 5px;
+	margin-right: 10px;
 	margin-bottom: 5px;
 }
 
