@@ -12,17 +12,26 @@
 
 <script>
 
+$.ajaxSetup({
+    beforeSend:function(){
+        // show gif here, eg:
+        $("#loading").fadeIn();
+    },
+    complete:function(){
+        // hide gif here, eg:
+        $("#loading").fadeOut();
+    }
+});
+
+
+
 $( document ).ready(function() {
+
     $('#mainmenu').on('change', function() {
   alert( this.value ); // or $(this).val()
   loadthis = this.value;
   ajaxload();
 	});
-	
-$( "#result" ).load( "p1.html", function() {
-  alert( "Load was performed." );
-});
-
 });
 
 function ajaxload() {
@@ -34,6 +43,10 @@ $( "#page" ).load(loadthis+".html");
 
 </head>
 <body>
+
+<div id="loading">
+<div id="spinner"></div>
+</div>
 
 <div id="navigation">
 <h1>AlcoDrop 24/7</h1>
@@ -52,15 +65,19 @@ $( "#page" ).load(loadthis+".html");
 </select>
 </div>
 
-<div class="animated fadeInDownBig" style="text-align:center">
+<div id="page">
+
+<div class="animated fadeInDownBig" style="-webkit-animation-delay: 2s; text-align:center">
 <br><br>
 <img src="drop.png" width="50%" style="margin-left:-10px;">
 </div>
 
-<h1 class="logotext animated fadeIn andel10">AlcoDrop 24/7</h1>
-<h1 class="logotextsmall animated fadeIn andel10">
-You Order. We Delivery. You Enjoy!
+<h1 class="logotext animated fadeIn" style="-webkit-animation-delay: 3s;">AlcoDrop 24/7</h1>
+<h1 class="logotextsmall animated fadeIn" style="-webkit-animation-delay: 4s;">
+You Order.<br>We Delivery.<br>You Enjoy!
 </h1>
+
+</div>
 
 </body>
 </html>
