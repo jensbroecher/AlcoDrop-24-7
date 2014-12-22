@@ -18,7 +18,52 @@ function onDeviceReady() {
 }
 
 function clearall() {
+	document.getElementById('product1').innerHTML = '';
+	document.getElementById('size1').innerHTML = '';
+	document.getElementById('price1').innerHTML = '';
 	
+	document.getElementById('product2').innerHTML = '';
+	document.getElementById('size2').innerHTML = '';
+	document.getElementById('price2').innerHTML = '';
+	
+	document.getElementById('product3').innerHTML = '';
+	document.getElementById('size3').innerHTML = '';
+	document.getElementById('price3').innerHTML = '';
+	
+	document.getElementById('product4').innerHTML = '';
+	document.getElementById('size4').innerHTML = '';
+	document.getElementById('price4').innerHTML = '';
+	
+	document.getElementById('product4').innerHTML = '';
+	document.getElementById('size4').innerHTML = '';
+	document.getElementById('price4').innerHTML = '';
+	
+	document.getElementById('product5').innerHTML = '';
+	document.getElementById('size5').innerHTML = '';
+	document.getElementById('price5').innerHTML = '';
+	
+	document.getElementById('product6').innerHTML = '';
+	document.getElementById('size6').innerHTML = '';
+	document.getElementById('price6').innerHTML = '';
+	
+	document.getElementById('product7').innerHTML = '';
+	document.getElementById('size7').innerHTML = '';
+	document.getElementById('price7').innerHTML = '';
+	
+	document.getElementById('product8').innerHTML = '';
+	document.getElementById('size8').innerHTML = '';
+	document.getElementById('price8').innerHTML = '';
+	
+	document.getElementById('product9').innerHTML = '';
+	document.getElementById('size9').innerHTML = '';
+	document.getElementById('price9').innerHTML = '';
+	
+	document.getElementById('product10').innerHTML = '';
+	document.getElementById('size10').innerHTML = '';
+	document.getElementById('price10').innerHTML = '';
+	
+	document.getElementById('totalammount').innerHTML = '';
+	document.getElementById('totalammount2').innerHTML = '';
 }
 
 function clearcheckout() {
@@ -27,18 +72,15 @@ if (closeit == true) {
 	
   	 $("html, body").animate({ scrollTop: 0 }, "slow");
 	 
-	 localStorage.clear();
+	 window.localStorage.clear();
+	 clearall();
 	 
-	 function cleanLocalStorage() {
-    for(key in localStorage) {
-        delete localStorage[key];
-    }
-}
 	 document.getElementById('ordernowwindow').style.display='none';
 	 document.getElementById('opencartwindow').style.display='none';
-	 document.getElementById('blur').className = 'lessblur';
 	 
-	 window.location.reload();
+	 document.getElementById('page').className = 'lessblur';
+	 
+	 // window.location.reload();
 	 
 } else {
    
@@ -49,7 +91,7 @@ function opencartwindow() {
 	
 	$("html, body").animate({ scrollTop: 0 }, "slow");
 	
-	document.getElementById('blur').className = 'blur';
+	document.getElementById('page').className = 'blur';
 	
 	document.getElementById('opencartwindow').style.display='block';
 	
@@ -145,10 +187,10 @@ function closecartwindow() {
 	
 	$("html, body").animate({ scrollTop: 0 }, "slow");
 	
-	document.getElementById('blur').className = 'lessblur';
+	document.getElementById('page').className = 'lessblur';
 	
 	document.getElementById('opencartwindow').style.display='none';
-	
+		
 }
 
 function openorderwindow() {
@@ -156,7 +198,7 @@ function openorderwindow() {
 	$("html, body").animate({ scrollTop: 0 }, "slow");
 	
 	document.getElementById('ordernowwindow').style.display='block';
-	document.getElementById('blur2').style.display='none';
+	document.getElementById('page').style.display='none';
 	
 }
 function closeorderwindow() {
@@ -165,7 +207,10 @@ function closeorderwindow() {
 	
 	document.getElementById('ordernowwindow').style.display='none';
 	document.getElementById('opencartwindow').style.display='none';
-	document.getElementById('blur2').style.display='block';
+	
+	document.getElementById('page').style.display='block';
+	
+	document.getElementById('page').className = 'lessblur';
 	
 }
 
@@ -189,6 +234,9 @@ $( document ).ready(function() {
   loadthis = this.value;
   ajaxload();
 	});
+	
+	$( "#page" ).load("start.html");
+	
 });
 
 function ajaxload() {
@@ -367,12 +415,12 @@ $( "#page" ).load(loadthis+".html");
 <div class="opencartwindowbutton" onClick="closecartwindow();">Continue Shopping</div>
 </div>
 
-<div id="blur">
+
 
 <div id="navigation">
 <h1>AlcoDrop 24/7</h1>
 <select id="mainmenu">
-<option>Drinks selection:</option>
+<option value="start">Drinks selection:</option>
 <option value="p1">IMPORTED WHISKIES</option>
 <option value="p1b">SINGLEMALT WHISKIES</option>
 <option value="p2">COGNACS/BRANDY</option>
@@ -390,26 +438,6 @@ $( "#page" ).load(loadthis+".html");
 
 
 <div id="page">
-
-<div class="animated fadeInDownBig" style="-webkit-animation-delay: 2s; text-align:center">
-<br><br>
-<img src="drop.png" width="50%" style="margin-left:-10px;" onclick="
-    localStorage.setItem('product', 'RED BULL');
-    localStorage.setItem('size', '250');
-    localStorage.setItem('price', '250');
-    opencartwindow();
-    ">
-
-</div>
-
-<h1 class="logotext animated fadeIn" style="-webkit-animation-delay: 3s;">AlcoDrop 24/7</h1>
-<h1 class="logotextsmall animated fadeIn" style="-webkit-animation-delay: 4s;">
-You Order.<br>
-We Deliver.<br>You Enjoy!
-</h1>
-
-</div>
-
 </div>
 
 </body>
