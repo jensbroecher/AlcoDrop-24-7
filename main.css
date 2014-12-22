@@ -13,6 +13,27 @@ body {
 	-webkit-filter: blur(5px);
 	pointer-events: none;
 }
+.titleincartwindow {
+	color: #FFF;
+	background-color: #999;
+	text-align: center;
+	width: 100%;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+#summaryboxes div {
+	float: left;
+	width: 33.3%;
+	margin-bottom: 1px;
+	text-align: center;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	overflow: hidden;
+}
+#summaryboxes {
+	margin-top: 5px;
+}
+
 .lessblur {
 	-webkit-filter: blur(0px);
 	pointer-events: all;

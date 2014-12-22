@@ -23,6 +23,77 @@ function opencartwindow() {
 	document.getElementById('size').innerHTML = localStorage.getItem('size');
 	document.getElementById('price').innerHTML = localStorage.getItem('price');
 	
+	var addedtocartnumber = document.getElementById('addedtocartnumber').innerHTML;
+	
+	scoreinbox1 = (addedtocartnumber*1+1); 
+	document.getElementById('addedtocartnumber').innerHTML=scoreinbox1;
+	
+	if(scoreinbox1 == 1){
+		
+	document.getElementById('product1').innerHTML = localStorage.getItem('product');
+	document.getElementById('size1').innerHTML = localStorage.getItem('size')  + ' ML';
+	document.getElementById('price1').innerHTML = localStorage.getItem('price') + ' KES';
+	
+	}
+	else if(scoreinbox1 == 2){
+		
+	document.getElementById('product2').innerHTML = localStorage.getItem('product');
+	document.getElementById('size2').innerHTML = localStorage.getItem('size')  + ' ML';
+	document.getElementById('price2').innerHTML = localStorage.getItem('price') + ' KES';
+	}
+	else if(scoreinbox1 == 3){
+		
+	document.getElementById('product3').innerHTML = localStorage.getItem('product');
+	document.getElementById('size3').innerHTML = localStorage.getItem('size')  + ' ML';
+	document.getElementById('price3').innerHTML = localStorage.getItem('price') + ' KES';
+	}
+	else if(scoreinbox1 == 4){
+		
+	document.getElementById('product4').innerHTML = localStorage.getItem('product');
+	document.getElementById('size4').innerHTML = localStorage.getItem('size')  + ' ML';
+	document.getElementById('price4').innerHTML = localStorage.getItem('price') + ' KES';
+	}
+	else if(scoreinbox1 == 5){
+		
+	document.getElementById('product5').innerHTML = localStorage.getItem('product');
+	document.getElementById('size5').innerHTML = localStorage.getItem('size')  + ' ML';
+	document.getElementById('price5').innerHTML = localStorage.getItem('price') + ' KES';
+	}
+	else if(scoreinbox1 == 6){
+		
+	document.getElementById('product6').innerHTML = localStorage.getItem('product');
+	document.getElementById('size6').innerHTML = localStorage.getItem('size')  + ' ML';
+	document.getElementById('price6').innerHTML = localStorage.getItem('price') + ' KES';
+	}
+	else if(scoreinbox1 == 7){
+		
+	document.getElementById('product7').innerHTML = localStorage.getItem('product');
+	document.getElementById('size7').innerHTML = localStorage.getItem('size')  + ' ML';
+	document.getElementById('price7').innerHTML = localStorage.getItem('price') + 'KES';
+	}
+	else if(scoreinbox1 == 8){
+		
+	document.getElementById('product8').innerHTML = localStorage.getItem('product');
+	document.getElementById('size8').innerHTML = localStorage.getItem('size')  + ' ML';
+	document.getElementById('price8').innerHTML = localStorage.getItem('price') + ' KES';
+	}
+	else if(scoreinbox1 == 9){
+		
+	document.getElementById('product9').innerHTML = localStorage.getItem('product');
+	document.getElementById('size9').innerHTML = localStorage.getItem('size')  + ' ML';
+	document.getElementById('price9').innerHTML = localStorage.getItem('price') + ' KES';
+	}
+	else if(scoreinbox1 == 10){
+		
+	document.getElementById('product10').innerHTML = localStorage.getItem('product');
+	document.getElementById('size10').innerHTML = localStorage.getItem('size')  + ' ML';
+	document.getElementById('price10').innerHTML = localStorage.getItem('price') + ' KES';
+	}
+	else {
+		alert('Maximum Number of Products reached! Please Order now');
+		document.getElementById('addedtocartnumber').innerHTML=10;
+	}
+	
 }
 
 function closecartwindow() {
@@ -31,6 +102,21 @@ function closecartwindow() {
 	document.getElementById('blur').className = 'lessblur';
 	
 	document.getElementById('opencartwindow').style.display='none';
+	
+}
+
+function openorderwindow() {
+	
+	$("html, body").animate({ scrollTop: 0 }, "slow");
+	
+	document.getElementById('ordernowwindow').style.display='block';
+	
+}
+function closeorderwindow() {
+	
+	$("html, body").animate({ scrollTop: 0 }, "slow");
+	
+	document.getElementById('ordernowwindow').style.display='none';
 	
 }
 
@@ -66,20 +152,76 @@ $( "#page" ).load(loadthis+".html");
 </head>
 <body>
 
+<div id="devoptions">
+</div>
+
 <div id="loading">
 <div id="spinner"></div>
 </div>
 
 <div id="ordernowwindow">
-Summary:
+<div class="titleincartwindow">Summary:</div>
+
+<div id="summaryboxes">
+<div class="animated fadeIn andel1" id="product1"></div>
+<div class="animated fadeIn andel1"><span id="size1"></span> </div>
+<div class="animated fadeIn andel1"><span id="price1"></span> </div>
+
+<div class="animated fadeIn andel2" id="product2"></div>
+<div class="animated fadeIn andel2"><span id="size2"></span> </div>
+<div class="animated fadeIn andel2"><span id="price2"></span> </div>
+
+<div class="animated fadeIn andel3" id="product3"></div>
+<div class="animated fadeIn andel3"><span id="size3"></span> </div>
+<div class="animated fadeIn andel3"><span id="price3"></span> </div>
+
+<div class="animated fadeIn andel4" id="product4"></div>
+<div class="animated fadeIn andel4"><span id="size4"></span> </div>
+<div class="animated fadeIn andel4"><span id="price4"></span> </div>
+
+<div class="animated fadeIn andel5" id="product5"></div>
+<div class="animated fadeIn andel5"><span id="size5"></span> </div>
+<div class="animated fadeIn andel5"><span id="price5"></span> </div>
+
+<div class="animated fadeIn andel6" id="product6"></div>
+<div class="animated fadeIn andel6"><span id="size6"></span> </div>
+<div class="animated fadeIn andel6"><span id="price6"></span> </div>
+
+<div class="animated fadeIn andel7" id="product7"></div>
+<div class="animated fadeIn andel7"><span id="size7"></span> </div>
+<div class="animated fadeIn andel7"><span id="price7"></span> </div>
+
+<div class="animated fadeIn andel8" id="product8"></div>
+<div class="animated fadeIn andel8"><span id="size8"></span> </div>
+<div class="animated fadeIn andel8"><span id="price8"></span> </div>
+
+<div class="animated fadeIn andel9" id="product9"></div>
+<div class="animated fadeIn andel9"><span id="size9"></span> </div>
+<div class="animated fadeIn andel9"><span id="price9"></span> </div>
+
+<div class="animated fadeIn andel10" id="product10"></div>
+<div class="animated fadeIn andel10"><span id="size10"></span> </div>
+<div class="animated fadeIn andel10"><span id="price10"></span> </div>
+
+</div>
+<div style="clear:both"></div>
+
+<div class="opencartwindowbutton" onClick="">Checkout</div>
+
+<div class="opencartwindowbutton" onClick="">Clear Shopping Cart</div>
+
+<div class="opencartwindowbutton" onClick="closeorderwindow();">Close</div>
+
 </div>
 
 <div id="opencartwindow">
-Product added:
+<div class="titleincartwindow">Product added:</div>
 <div class="listproduct" id="product"></div>
 <div class="listproduct"><span id="size"></span> ML</div>
 <div class="listproduct"><span id="price"></span> KES</div>
-<div class="opencartwindowbutton">Order now!</div>
+<br>
+<div class="titleincartwindow">Products in Cart: <span id="addedtocartnumber">0</span></div>
+<div class="opencartwindowbutton" onClick="openorderwindow();">Order now!</div>
 <div class="opencartwindowbutton" onClick="closecartwindow();">Continue Shopping</div>
 </div>
 
@@ -109,7 +251,12 @@ Product added:
 
 <div class="animated fadeInDownBig" style="-webkit-animation-delay: 2s; text-align:center">
 <br><br>
-<img src="drop.png" width="50%" style="margin-left:-10px;">
+<img src="drop.png" width="50%" style="margin-left:-10px;" onclick="
+    localStorage.setItem('product', 'RED BULL');
+    localStorage.setItem('size', '250');
+    localStorage.setItem('price', '250');
+    opencartwindow();
+    ">
 </div>
 
 <h1 class="logotext animated fadeIn" style="-webkit-animation-delay: 3s;">AlcoDrop 24/7</h1>
