@@ -114,6 +114,16 @@ body {
 	padding-top: 8px;
 	padding-bottom: 8px;
 }
+.opencartwindowbutton2 {
+	color: #FFF;
+	background-color: #999999;
+	text-align: center;
+	width: 100%;
+	margin-top: 8px;
+	margin-bottom: 8px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+}
 
 #navigation {
 	background-color: #FFF;

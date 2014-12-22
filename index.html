@@ -21,7 +21,7 @@ if (closeit == true) {
 	 document.getElementById('opencartwindow').style.display='none';
 	 document.getElementById('blur').className = 'lessblur';
 	 document.getElementById('blur2').className = 'lessblur';
-	 localStorage.clear();
+	 window.localStorage.clear();
 	 
 } else {
    
@@ -148,6 +148,7 @@ function closeorderwindow() {
 	$("html, body").animate({ scrollTop: 0 }, "slow");
 	
 	document.getElementById('ordernowwindow').style.display='none';
+	document.getElementById('opencartwindow').style.display='none';
 	
 }
 
@@ -325,9 +326,9 @@ $( "#page" ).load(loadthis+".html");
 
 <div class="opencartwindowbutton" onClick="">Checkout</div>
 
-<div class="opencartwindowbutton" onClick="clearcheckout()">Clear Shopping Cart</div>
+<div class="opencartwindowbutton2" onClick="clearcheckout()">Clear Shopping Cart</div>
 
-<div class="opencartwindowbutton" onClick="closeorderwindow();">Continue Shopping</div>
+<div class="opencartwindowbutton2" onClick="closeorderwindow();">Continue Shopping</div>
 
 </div>
 
