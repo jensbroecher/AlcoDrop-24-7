@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+<link href="main.css" rel="stylesheet" type="text/css">
+<link href="animate.min.css" rel="stylesheet" type="text/css">
+
+<script src="jquery.min.js"></script>
+
+<script>
+
+$( document ).ready(function() {
+    $('#mainmenu').on('change', function() {
+  alert( this.value ); // or $(this).val()
+  loadthis = this.value;
+  ajaxload();
+	});
+	
+$( "#result" ).load( "p1.html", function() {
+  alert( "Load was performed." );
+});
+
+});
+
+function ajaxload() {
+$( "#page" ).load(loadthis+".html");
+}
+
+
+</script>
+
+</head>
+<body>
+
+<div id="navigation">
+<h1>AlcoDrop 24/7</h1>
+<select id="mainmenu">
+<option>Drinks selection:</option>
+<option value="p1">IMPORTED WHISKIES</option>
+<option value="p2">COGNACS/BRANDY</option>
+<option value="p3">WHITE RUM &amp;BLACK RUM</option>
+<option value="p4">TEQUILLAS/SHOOTERS</option>
+<option value="p5">APPERTIFFS/BITTERS</option>
+<option value="p6">CHAMPAGNE</option>
+<option value="p7">GINS</option>
+<option value="p8">VODKAS</option>
+<option value="p9">LOCAL CANES/BRANDY/WHISKIES</option>
+<option value="p10">ENERGY DRINKS</option>
+</select>
+</div>
+
+<div class="animated fadeInDownBig" style="text-align:center">
+<br><br>
+<img src="drop.png" width="50%" style="margin-left:-10px;">
+</div>
+
+<h1 class="logotext animated fadeIn andel10">AlcoDrop 24/7</h1>
+<h1 class="logotextsmall animated fadeIn andel10">
+You Order. We Delivery. You Enjoy!
+</h1>
+
+</body>
+</html>
