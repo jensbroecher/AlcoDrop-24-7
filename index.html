@@ -17,6 +17,10 @@ function onDeviceReady() {
 		
 }
 
+function clearall() {
+	
+}
+
 function clearcheckout() {
 	var closeit = confirm("Are you sure you want to clear your Shopping Cart?");
 if (closeit == true) {
@@ -35,7 +39,7 @@ if (closeit == true) {
 	 document.getElementById('blur').className = 'lessblur';
 	 document.getElementById('blur2').className = 'lessblur';
 	 
-	 
+	 window.location.reload();
 	 
 } else {
    
