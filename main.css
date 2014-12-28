@@ -141,6 +141,9 @@ body {
 	width: 100%;
 	position: absolute;
 	z-index: 1;
+	border-top-width: 6px;
+	border-top-style: solid;
+	border-top-color: #000;
 }
 #navigation select {
 	height: 40px;
