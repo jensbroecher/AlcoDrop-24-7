@@ -42,6 +42,7 @@
 	<gap:plugin name="com.pushwoosh.plugins.pushwoosh" />
 	<gap:plugin name="de.appplant.cordova.plugin.local-notification" />
 	<gap:plugin name="com.phonegap.plugins.barcodescanner" />
+	<gap:plugin name="nl.x-services.plugins.socialsharing" />
 	
 	<access origin="*"/> <!-- allow all pages, use for development -->
 	<access origin="*.pushwoosh.com"/> <!-- allow pushwoosh service -->
