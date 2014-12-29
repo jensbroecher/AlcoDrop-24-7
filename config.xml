@@ -17,6 +17,8 @@
         AlcoDrop Team
     </author>
 	
+	<icon src="icon.png" />
+	
 	<preference name="android-minSdkVersion" value="15" /> 
 	
 	<!-- Core plugins -->
