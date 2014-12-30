@@ -79,9 +79,9 @@ if (closeit == true) {
 	 document.getElementById('ordernowwindow').style.display='none';
 	 document.getElementById('opencartwindow').style.display='none';
 	 
-	 document.getElementById('page').className = 'lessblur';
+	 document.getElementById('mainholder').className = 'lessblur';
 	 
-	 document.getElementById('page').style.display='block';
+	 document.getElementById('mainholder').style.display='block';
 	 
 	 // window.location.reload();
 	 
@@ -94,7 +94,7 @@ function opencartwindow() {
 	
 	$("html, body").animate({ scrollTop: 0 }, "slow");
 	
-	document.getElementById('page').className = 'blur';
+	document.getElementById('mainholder').className = 'blur';
 	
 	document.getElementById('opencartwindow').style.display='block';
 	
@@ -190,7 +190,7 @@ function closecartwindow() {
 	
 	$("html, body").animate({ scrollTop: 0 }, "slow");
 	
-	document.getElementById('page').className = 'lessblur';
+	document.getElementById('mainholder').className = 'lessblur';
 	
 	document.getElementById('opencartwindow').style.display='none';
 		
@@ -201,7 +201,7 @@ function openorderwindow() {
 	$("html, body").animate({ scrollTop: 0 }, "slow");
 	
 	document.getElementById('ordernowwindow').style.display='block';
-	document.getElementById('page').style.display='none';
+	document.getElementById('mainholder').style.display='none';
 	
 }
 function closeorderwindow() {
@@ -211,9 +211,9 @@ function closeorderwindow() {
 	document.getElementById('ordernowwindow').style.display='none';
 	document.getElementById('opencartwindow').style.display='none';
 	
-	document.getElementById('page').style.display='block';
+	document.getElementById('mainholder').style.display='block';
 	
-	document.getElementById('page').className = 'lessblur';
+	document.getElementById('mainholder').className = 'lessblur';
 	
 }
 
@@ -418,7 +418,7 @@ $( "#page" ).load(loadthis+".html");
 <div class="opencartwindowbutton" onClick="closecartwindow();">Continue Shopping</div>
 </div>
 
-
+<div id="mainholder">
 
 <div id="navigation">
 <img src="logoinapp.png">
@@ -441,6 +441,8 @@ $( "#page" ).load(loadthis+".html");
 
 
 <div id="page">
+</div>
+
 </div>
 
 </body>
