@@ -8,7 +8,7 @@ body {
 	background-size: 100% 100%;
 }
 .blur {
-	opacity: 0.5;
+	opacity: 0.3;
 	pointer-events: none;
 }
 .titleincartwindow {
