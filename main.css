@@ -4,9 +4,7 @@ body {
 	font-size: 18px;
 	margin: 0px;
 	padding: 0px;
-	background-image: url(bg.png);
-	background-repeat: no-repeat;
-	background-color: #32A9DF;
+	background-color: #000000;
 	background-size: 100% 100%;
 }
 .blur {
@@ -159,17 +157,9 @@ body {
 	padding-left: 10px;
 	float: right;
 }
-#navigation h1 {
-	font-size: 20px;
-	line-height: 40px;
-	font-weight: normal;
-	padding: 0px;
-	margin-top: 0px;
-	margin-right: 0px;
-	margin-bottom: 0px;
-	margin-left: 15px;
-	color: #1C5F80;
-	float: left;
+#navigation img {
+	margin-left: 5%;
+	height: 100%;
 }
 #opencartwindow {
 	background-color: rgba(255,255,255,0.9);
