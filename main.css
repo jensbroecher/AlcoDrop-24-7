@@ -93,7 +93,7 @@ body {
 	display: none;
 }
 #proceedwithorder1 {
-	background-color: #FFF;
+	background-color: #E1E1E1;
 	height: 100%;
 	width: 100%;
 	position: absolute;
@@ -103,17 +103,17 @@ body {
 #proceedorderform1 input, #proceedorderform1 select {
 	background-color: #FFF;
 	width: 80%;
-	margin-right: auto;
-	margin-left: auto;
 	padding-top: 7px;
 	padding-bottom: 7px;
 	border: 1px solid #CCC;
 	padding-right: 5px;
 	padding-left: 5px;
 	margin-bottom: 10px;
+	margin-right: 0px;
+	margin-left: 0px;
 }
 .notice {
-	background-color: #DBDBDB;
+	background-color: #F5F5F5;
 	padding: 10px;
 	border-radius: 10px;
 	margin: 10px;

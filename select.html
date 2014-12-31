@@ -3,6 +3,8 @@
 <head>
 <meta charset="utf-8">
 
+<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+
 <link href="main.css" rel="stylesheet" type="text/css">
 <link href="animate.min.css" rel="stylesheet" type="text/css">
 
@@ -270,6 +272,7 @@ function ajaxorderform() {
 	var customername = document.getElementById("customername").value;
 	var customeremail = document.getElementById("customeremail").value;
 	var customerphone = document.getElementById("customerphone").value;
+	var customerage = document.getElementById("customerage").value;
 	var latview = document.getElementById("lat-view").innerHTML;
 	var longview = document.getElementById("long-view").innerHTML;
 	
@@ -278,6 +281,7 @@ function ajaxorderform() {
 	alert(customername);
 	alert(customeremail);
 	alert(customerphone);
+	alert(customerage);
 	alert(latview);
 	alert(longview);
 }
@@ -294,15 +298,19 @@ function ajaxorderform() {
 <div id="spinner"></div>
 </div>
 
-<div id="proceedwithorder1">
+<div id="proceedwithorder1" class="animated fadeIn">
 <center>
 <div id="lat-view" style="display:none" class="lat-view"></div>
 <div id="long-view" style="display:none" class="long-view"></div>
 <h1>Order Details</h1>
 <form id="proceedorderform1" action="javascript:ajaxorderform();">
-<input id="customeremail" required type="email" placeholder="E-Mail">
-<input id="customername" required type="text" placeholder="Name">
-<input id="customerphone" required type="tel" placeholder="Phone">
+<input id="customeremail" required type="email" placeholder="E-Mail"><br>
+
+<input id="customername" required type="text" placeholder="Name"><br>
+
+<input id="customerphone" required type="tel" placeholder="Phone"><br>
+
+<input id="customerage" required type="number" placeholder="Age">
 <h1>Choose Area</h1>
 <div class="notice">
 Alcodrop 24 7 is currently only available in Nairobi. We are adding more locations soon.
