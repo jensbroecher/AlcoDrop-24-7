@@ -263,6 +263,25 @@ function disp(pos) {
    $('.long-view').html(pos.coords.longitude);
 }
 
+function ajaxorderform() {	
+	var e = document.getElementById("chooseareainnairobi");
+	var locationinnairobi = e.options[e.selectedIndex].text;
+	
+	var customername = document.getElementById("customername").value;
+	var customeremail = document.getElementById("customeremail").value;
+	var customerphone = document.getElementById("customerphone").value;
+	var latview = document.getElementById("lat-view").innerHTML;
+	var longview = document.getElementById("long-view").innerHTML;
+	
+	alert('Data sent to Server:');
+	alert(locationinnairobi);
+	alert(customername);
+	alert(customeremail);
+	alert(customerphone);
+	alert(latview);
+	alert(longview);
+}
+
 </script>
 
 </head>
@@ -280,10 +299,10 @@ function disp(pos) {
 <div id="lat-view" style="display:none" class="lat-view"></div>
 <div id="long-view" style="display:none" class="long-view"></div>
 <h1>Order Details</h1>
-<form id="proceedorderform1" action="javascript:ajaxorderform(); return false;">
-<input required type="email" placeholder="E-Mail">
-<input required type="text" placeholder="Name">
-<input required type="tel" placeholder="Phone">
+<form id="proceedorderform1" action="javascript:ajaxorderform();">
+<input id="customeremail" required type="email" placeholder="E-Mail">
+<input id="customername" required type="text" placeholder="Name">
+<input id="customerphone" required type="tel" placeholder="Phone">
 <h1>Choose Area</h1>
 <div class="notice">
 Alcodrop 24 7 is currently only available in Nairobi. We are adding more locations soon.
