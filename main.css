@@ -9,6 +9,7 @@ body {
 }
 .blur {
 	pointer-events: none;
+	opacity: 0.3;
 }
 .titleincartwindow {
 	color: #FFF;
@@ -37,8 +38,6 @@ body {
 .listallproducts {
 	padding-top: 3px;
 }
-
-
 #summaryboxes {
 	margin-top: 5px;
 }
@@ -49,7 +48,6 @@ body {
 	margin-bottom: 5px;
 }
 .lessblur {
-	-webkit-filter: blur(0px);
 	pointer-events: all !important;
 }
 .logotext {
