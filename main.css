@@ -100,10 +100,9 @@ body {
 	z-index: 110;
 	display: none;
 }
-#proceedorderform1 input {
+#proceedorderform1 input, #proceedorderform1 select {
 	background-color: #FFF;
 	width: 80%;
-	margin-top: 12px;
 	margin-right: auto;
 	margin-left: auto;
 	padding-top: 7px;
@@ -111,7 +110,17 @@ body {
 	border: 1px solid #CCC;
 	padding-right: 5px;
 	padding-left: 5px;
+	margin-bottom: 10px;
 }
+.notice {
+	background-color: #DBDBDB;
+	padding: 10px;
+	border-radius: 10px;
+	margin: 10px;
+	font-size: 14px;
+	font-weight: normal;
+}
+
 
 
 #spinner {
@@ -129,6 +138,14 @@ body {
 	padding-top: 10px;
 	padding-bottom: 10px;
 }
+h1 {
+	font-family: sans-serif;
+	font-size: 24px;
+	font-weight: normal;
+	padding: 0px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
 .opencartwindowbutton {
 	color: #FFF;
 	background-color: #2785B0;
@@ -138,7 +155,16 @@ body {
 	margin-bottom: 8px;
 	padding-top: 8px;
 	padding-bottom: 8px;
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 0px;
+	border-left-width: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
 }
+
 .opencartwindowbutton2 {
 	color: #FFF;
 	background-color: #999999;
@@ -148,6 +174,14 @@ body {
 	margin-bottom: 8px;
 	padding-top: 8px;
 	padding-bottom: 8px;
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 0px;
+	border-left-width: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
 }
 
 #navigation {

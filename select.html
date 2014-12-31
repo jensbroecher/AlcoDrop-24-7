@@ -277,14 +277,33 @@ function disp(pos) {
 
 <div id="proceedwithorder1">
 <center>
-<div class="lat-view"></div>
-<div class="long-view"></div>
+<div id="lat-view" style="display:none" class="lat-view"></div>
+<div id="long-view" style="display:none" class="long-view"></div>
+<h1>Order Details</h1>
 <form id="proceedorderform1" action="javascript:ajaxorderform(); return false;">
-<input required type="text" placeholder="My Name">
 <input required type="email" placeholder="E-Mail">
+<input required type="text" placeholder="Name">
 <input required type="tel" placeholder="Phone">
-<button onClick="proceedwithorderformsubmit">Fake Click Validate</button>
-<input id="proceedorderform1submit" name="Submit" type="submit" value="Submit">
+<h1>Choose Area</h1>
+<div class="notice">
+Alcodrop 24 7 is currently only available in Nairobi. We are adding more locations soon.
+</div>
+<select id="chooseareainnairobi">
+  <option value="CBD">CBD</option>
+  <option value="Dagoretti">Dagoretti</option>
+  <option value="Doonholm">Doonholm</option>
+  <option value="Eastleigh ">Eastleigh </option>
+  <option value="Gigiri">Gigiri</option>
+  <option value="Highridge">Highridge</option>
+  <option value="Hurlingham">Hurlingham</option>
+  <option value="Jamhuri">Jamhuri</option>
+  <option value="Karen">Karen</option>
+  <option value="Kassarani">Kassarani</option>
+  <option value="Kileleshwa ">Kileleshwa </option>
+  <option value="Kilimani">Kilimani</option>
+</select>
+<button class="opencartwindowbutton"  onClick="proceedwithorderformsubmit();">Next</button>
+<input style="display:none" id="proceedorderform1submit" name="Submit" type="submit" value="Submit">
 </form>
 </center>
 </div>
