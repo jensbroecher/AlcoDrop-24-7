@@ -178,8 +178,9 @@ function opencartwindow() {
 	document.getElementById('price10').innerHTML = localStorage.getItem('price') + ' KES';
 	}
 	else {
-		alert('Maximum number of products reached! Please order now');
+		alert('Maximum number of products reached. Please order now!');
 		document.getElementById('addedtocartnumber').innerHTML=10;
+		document.getElementById('continueshoppingbuttononorder').style.display='none';
 	}
 	
 }
@@ -191,6 +192,8 @@ function closecartwindow() {
 	document.getElementById('mainholder').className = 'lessblur';
 	
 	document.getElementById('opencartwindow').style.display='none';
+	
+	document.getElementById('continueshoppingbuttononorder').style.display='block';
 		
 }
 
@@ -244,6 +247,15 @@ function ajaxload() {
 $( "#page" ).load(loadthis+".html");
 }
 
+function proceedwithorder1() {
+	document.getElementById('proceedwithorder1').style.display='block';
+}
+function proceedwithorderformsubmit() {
+	var $myForm = $('#proceedorderform1')
+	if (!$myForm[0].checkValidity()) {
+    $myForm.find(':submit').click()
+	}
+}
 
 </script>
 
@@ -255,6 +267,16 @@ $( "#page" ).load(loadthis+".html");
 
 <div id="loading">
 <div id="spinner"></div>
+</div>
+
+<div id="proceedwithorder1">
+
+<form id="proceedorderform1">
+<input type="text" placeholder="My Name">
+<input type="email" placeholder="E-Mail">
+<input type="tel" placeholder="Phone">
+<input id="proceedorderform1submit" name="Submit" type="submit" value="Submit">
+</form>
 </div>
 
 <div id="ordernowwindow">
@@ -390,9 +412,9 @@ $( "#page" ).load(loadthis+".html");
 
 <div style="clear:both"></div>
 
-<div class="opencartwindowbutton" onClick="">Checkout</div>
+<div class="opencartwindowbutton" onClick="proceedwithorder1();">Checkout</div>
 
-<div class="opencartwindowbutton2" onClick="clearcheckout()">Clear Shopping Cart</div>
+<div class="opencartwindowbutton2" onClick="clearcheckout();">Clear Shopping Cart</div>
 
 <div class="opencartwindowbutton2" onClick="closeorderwindow();">Continue Shopping</div>
 
@@ -413,7 +435,7 @@ $( "#page" ).load(loadthis+".html");
 <div style="clear:both"></div>
 
 <div class="opencartwindowbutton" onClick="openorderwindow();">Order now!</div>
-<div class="opencartwindowbutton" onClick="closecartwindow();">Continue Shopping</div>
+<div id="continueshoppingbuttononorder" class="opencartwindowbutton" onClick="closecartwindow();">Continue Shopping</div>
 <br><br>
 </div>
 
