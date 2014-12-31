@@ -249,12 +249,18 @@ $( "#page" ).load(loadthis+".html");
 
 function proceedwithorder1() {
 	document.getElementById('proceedwithorder1').style.display='block';
+	navigator.geolocation.getCurrentPosition(disp);
 }
 function proceedwithorderformsubmit() {
 	var $myForm = $('#proceedorderform1')
 	if (!$myForm[0].checkValidity()) {
     $myForm.find(':submit').click()
 	}
+}
+
+function disp(pos) {
+   $('.lat-view').html(pos.coords.latitude);
+   $('.long-view').html(pos.coords.longitude);
 }
 
 </script>
@@ -270,13 +276,17 @@ function proceedwithorderformsubmit() {
 </div>
 
 <div id="proceedwithorder1">
-
-<form id="proceedorderform1">
-<input type="text" placeholder="My Name">
-<input type="email" placeholder="E-Mail">
-<input type="tel" placeholder="Phone">
+<center>
+<div class="lat-view"></div>
+<div class="long-view"></div>
+<form id="proceedorderform1" action="javascript:ajaxorderform(); return false;">
+<input required type="text" placeholder="My Name">
+<input required type="email" placeholder="E-Mail">
+<input required type="tel" placeholder="Phone">
+<button onClick="proceedwithorderformsubmit">Fake Click Validate</button>
 <input id="proceedorderform1submit" name="Submit" type="submit" value="Submit">
 </form>
+</center>
 </div>
 
 <div id="ordernowwindow">
@@ -436,7 +446,6 @@ function proceedwithorderformsubmit() {
 
 <div class="opencartwindowbutton" onClick="openorderwindow();">Order now!</div>
 <div id="continueshoppingbuttononorder" class="opencartwindowbutton" onClick="closecartwindow();">Continue Shopping</div>
-<br><br>
 </div>
 
 <div id="mainholder">
