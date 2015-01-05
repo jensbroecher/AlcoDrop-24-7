@@ -3320,3 +3320,32 @@ transform:skewX(0deg)
 body {
 	font-family: sans-serif;
 }
+@-webkit-keyframes gogo {
+0% {
+opacity:0;
+transform-style: preserve-3d;
+perspective: 40px;
+transform: scale(0);
+transform-origin: 5% -30%;
+}
+100% {
+opacity:1;
+transform-style: preserve-3d;
+}
+}
+.gogo {
+	-webkit-animation-name: gogo;
+	-moz-animation-name: gogo;
+	-o-animation-name: gogo;
+	animation-name: gogo;
+	-webkit-animation-timing-function: ease-in;
+	-moz-animation-timing-function: ease-in;
+	-o-animation-timing-function: ease-in;
+	animation-timing-function: ease-in
+}
+.animated.gogo {
+	-webkit-animation-duration: .75s;
+	-moz-animation-duration: .75s;
+	-o-animation-duration: .75s;
+	animation-duration: .75s
+}
