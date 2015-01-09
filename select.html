@@ -245,6 +245,10 @@ $( document ).ready(function() {
 	
 });
 
+function selectedval() {
+		document.querySelector('#mainmenu [value="' + selectedval + '"]').selected = true;
+}
+
 function ajaxload() {
 $( "#page" ).load(loadthis+".html");
 }
