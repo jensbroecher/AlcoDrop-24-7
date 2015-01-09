@@ -243,11 +243,17 @@ $( document ).ready(function() {
 	
 	$( "#page" ).load("start.html");
 	
+	
+	
 });
 
-function selectedval() {
-		document.querySelector('#mainmenu [value="' + selectedval + '"]').selected = true;
-}
+function warning(){
+            if(true){
+                return "Do you want to start over? You will lose your shopping cart contents!";
+                
+            }
+        }
+window.onbeforeunload = warning;
 
 function ajaxload() {
 $( "#page" ).load(loadthis+".html");
@@ -503,7 +509,7 @@ Alcodrop 24 7 is currently only available in Nairobi. We are adding more locatio
 <div id="navigation">
 <img src="logoinapp.png">
 <select id="mainmenu">
-  <option value="start">Drinks selection:</option>
+<option value="start">Drinks selection:</option>
 <option value="p1">IMPORTED WHISKIES</option>
 <option value="p1b">SINGLEMALT WHISKIES</option>
 <option value="p2">COGNACS/BRANDY</option>
