@@ -3326,7 +3326,7 @@ opacity:0;
 transform-style: preserve-3d;
 perspective: 40px;
 transform: scale(0);
-transform-origin: 5% -30%;
+transform-origin: 5% -31%;
 }
 100% {
 opacity:1;
