@@ -11,11 +11,15 @@ table {
 	max-width: 400px;
 	padding: 6px;
 	margin-right: 10px;
+	font-size: 12px;
 }
-
+.addtocart:hover {
+	background-color: #666;
+}
 table td {
 	width: 33%;
 	text-align: center;
+	font-size: 12px;
 }
 table img {
 	width: 100%;

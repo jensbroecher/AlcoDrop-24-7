@@ -100,6 +100,24 @@ body {
 	z-index: 110;
 	display: none;
 }
+#choosepaymentoptions {
+	background-color: #FFF;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	z-index: 120;
+	display: none;
+	text-align: center;
+}
+.paymentprovider {
+	padding: 5px;
+	width: 70%;
+	border: 2px solid #CCC;
+	margin-bottom: 3px;
+}
+.paymentprovider:hover {
+	border: 2px solid #000;
+}
 #proceedorderform1 input, #proceedorderform1 select {
 	background-color: #FFF;
 	width: 80%;
@@ -120,9 +138,15 @@ body {
 	font-size: 14px;
 	font-weight: normal;
 }
-
-
-
+.notice2 {
+	background-color: #FFF;
+	padding: 5px;
+	border-radius: 10px;
+	margin: 5px;
+	font-size: 14px;
+	font-weight: normal;
+	text-align: center;
+}
 #spinner {
 	background-image: url(282.gif);
 	background-repeat: no-repeat;

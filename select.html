@@ -159,7 +159,7 @@ function opencartwindow() {
 		
 	document.getElementById('product7').innerHTML = localStorage.getItem('product');
 	document.getElementById('size7').innerHTML = localStorage.getItem('size')  + ' ML';
-	document.getElementById('price7').innerHTML = localStorage.getItem('price') + 'KES';
+	document.getElementById('price7').innerHTML = localStorage.getItem('price') + ' KES';
 	}
 	else if(scoreinbox1 == 8){
 		
@@ -253,15 +253,24 @@ function warning(){
                 
             }
         }
-window.onbeforeunload = warning;
+// window.onbeforeunload = warning;
 
 function ajaxload() {
 $( "#page" ).load(loadthis+".html");
 }
 
 function proceedwithorder1() {
-	document.getElementById('proceedwithorder1').style.display='block';
+	var currentotal = document.getElementById('totalammount2').innerHTML;
+	var requiredtotal = 1000;
 	navigator.geolocation.getCurrentPosition(disp);
+	
+	if (+currentotal < requiredtotal) {
+        alert("Sorry, minimum order price not reached! Order for 1000 KES and above and enjoy free delivery!");
+        return false;
+    }
+	else {
+	document.getElementById('proceedwithorder1').style.display='block';
+	}
 }
 function proceedwithorderformsubmit() {
 	var $myForm = $('#proceedorderform1')
@@ -275,7 +284,11 @@ function disp(pos) {
    $('.long-view').html(pos.coords.longitude);
 }
 
-function ajaxorderform() {	
+function ajaxorderform() {
+	localStorage.removeItem('product');
+	localStorage.removeItem('size');
+	localStorage.removeItem('price');
+	
 	var e = document.getElementById("chooseareainnairobi");
 	var locationinnairobi = e.options[e.selectedIndex].text;
 	
@@ -285,21 +298,179 @@ function ajaxorderform() {
 	var customerage = document.getElementById("customerage").value;
 	var latview = document.getElementById("lat-view").innerHTML;
 	var longview = document.getElementById("long-view").innerHTML;
+	var total = document.getElementById('totalammount2').innerHTML;
 	
-	alert('Data sent to Server:');
-	alert(locationinnairobi);
-	alert(customername);
-	alert(customeremail);
-	alert(customerphone);
-	alert(customerage);
-	alert(latview);
-	alert(longview);
-}
+	var totalusd =  total / 87;
+	
+	var totalusdrounded = Math.round(totalusd);
 
+	localStorage.setItem('customername',customername);
+	localStorage.setItem('customeremail',customeremail);
+	localStorage.setItem('customerphone',customerphone);
+	localStorage.setItem('customerage',customerage);
+	localStorage.setItem('latview',latview);
+	localStorage.setItem('longview',longview);
+	localStorage.setItem('locationinnairobi',locationinnairobi);
+	
+	localStorage.setItem('total',total);
+	localStorage.setItem('totalusd',totalusdrounded);
+	
+	var product1 = document.getElementById('product1').innerHTML;
+	var size1 = document.getElementById('size1').innerHTML;
+	var price1 = document.getElementById('price1').innerHTML;
+	localStorage.setItem('product1',product1);
+	localStorage.setItem('size1',size1);
+	localStorage.setItem('price1',price1);
+	
+	var product2 = document.getElementById('product2').innerHTML;
+	var size2 = document.getElementById('size2').innerHTML;
+	var price2 = document.getElementById('price2').innerHTML;
+	localStorage.setItem('product2',product2);
+	localStorage.setItem('size2',size2);
+	localStorage.setItem('price2',price2);
+	
+	var product3 = document.getElementById('product3').innerHTML;
+	var size3 = document.getElementById('size3').innerHTML;
+	var price3 = document.getElementById('price3').innerHTML;
+	localStorage.setItem('product3',product3);
+	localStorage.setItem('size3',size3);
+	localStorage.setItem('price3',price3);
+	
+	var product4 = document.getElementById('product4').innerHTML;
+	var size4 = document.getElementById('size4').innerHTML;
+	var price4 = document.getElementById('price4').innerHTML;
+	localStorage.setItem('product4',product4);
+	localStorage.setItem('size4',size4);
+	localStorage.setItem('price4',price4);
+	
+	var product5 = document.getElementById('product5').innerHTML;
+	var size5 = document.getElementById('size5').innerHTML;
+	var price5 = document.getElementById('price5').innerHTML;
+	localStorage.setItem('product5',product5);
+	localStorage.setItem('size5',size5);
+	localStorage.setItem('price5',price5);
+	
+	var product6 = document.getElementById('product6').innerHTML;
+	var size6 = document.getElementById('size6').innerHTML;
+	var price6 = document.getElementById('price6').innerHTML;
+	localStorage.setItem('product6',product6);
+	localStorage.setItem('size6',size6);
+	localStorage.setItem('price6',price6);
+	
+	var product7 = document.getElementById('product7').innerHTML;
+	var size7 = document.getElementById('size7').innerHTML;
+	var price7 = document.getElementById('price7').innerHTML;
+	localStorage.setItem('product7',product7);
+	localStorage.setItem('size7',size7);
+	localStorage.setItem('price7',price7);
+	
+	var product8 = document.getElementById('product8').innerHTML;
+	var size8 = document.getElementById('size8').innerHTML;
+	var price8 = document.getElementById('price8').innerHTML;
+	localStorage.setItem('product8',product8);
+	localStorage.setItem('size8',size8);
+	localStorage.setItem('price8',price8);
+	
+	var product9 = document.getElementById('product9').innerHTML;
+	var size9 = document.getElementById('size9').innerHTML;
+	var price9 = document.getElementById('price9').innerHTML;
+	localStorage.setItem('product9',product9);
+	localStorage.setItem('size9',size9);
+	localStorage.setItem('price9',price9);
+	
+	var product10 = document.getElementById('product10').innerHTML;
+	var size10 = document.getElementById('size10').innerHTML;
+	var price10 = document.getElementById('price10').innerHTML;
+	localStorage.setItem('product10',product10);
+	localStorage.setItem('size10',size10);
+	localStorage.setItem('price10',price10);
+	
+	// alert('Data sent to Server:');
+	// alert(locationinnairobi);
+	// alert(customername);
+	// alert(customeremail);
+	// alert(customerphone);
+	// alert(customerage);
+	// alert(latview);
+	// alert(longview);
+	
+	document.getElementById('choosepaymentoptions').style.display='block';
+}
+function paystart() {
+	var payoption = localStorage.getItem('payoption');
+	
+	var customername = localStorage.getItem('customername');
+	var customeremail = localStorage.getItem('customeremail');
+	var customerphone = localStorage.getItem('customerphone');
+	var customerage = localStorage.getItem('customerage');
+	var locationinnairobi = localStorage.getItem('locationinnairobi');
+	var latview = localStorage.getItem('latview');
+	var longview = localStorage.getItem('longview');
+	var total = localStorage.getItem('total');
+	var totalusd = localStorage.getItem('totalusd');
+	
+	var product1 = localStorage.getItem('product1');
+	var size1 = localStorage.getItem('size1');
+	var price1 = localStorage.getItem('price1');
+	
+	var product2 = localStorage.getItem('product2');
+	var size2 = localStorage.getItem('size2');
+	var price2 = localStorage.getItem('price2');
+	
+	var product3 = localStorage.getItem('product3');
+	var size3 = localStorage.getItem('size3');
+	var price3 = localStorage.getItem('price3');
+	
+	var product4 = localStorage.getItem('product4');
+	var size4 = localStorage.getItem('size4');
+	var price4 = localStorage.getItem('price4');
+	
+	var product5 = localStorage.getItem('product5');
+	var size5 = localStorage.getItem('size5');
+	var price5 = localStorage.getItem('price5');
+	
+	var product6 = localStorage.getItem('product6');
+	var size6 = localStorage.getItem('size6');
+	var price6 = localStorage.getItem('price6');
+	
+	var product7 = localStorage.getItem('product7');
+	var size7 = localStorage.getItem('size7');
+	var price7 = localStorage.getItem('price7');
+	
+	var product8 = localStorage.getItem('product8');
+	var size8 = localStorage.getItem('size8');
+	var price8 = localStorage.getItem('price8');
+	
+	var product9 = localStorage.getItem('product9');
+	var size9 = localStorage.getItem('size9');
+	var price9 = localStorage.getItem('price9');
+	
+	var product10 = localStorage.getItem('product10');
+	var size10 = localStorage.getItem('size10');
+	var price10 = localStorage.getItem('price10');
+	
+	if  (payoption == 'paypal') {
+	window.location.href = 'http://alcodrop247.com/gopaypal.php?customername='+customername+'&customeremail='+customeremail+'&customerphone='+customerphone+'&customerage='+customerage+'&locationinnairobi='+locationinnairobi+'&latview='+latview+'&longview='+longview+'&total='+total+'&totalusd='+totalusd+'&product1='+product1+'&product2='+product2+'&product3='+product3+'&product4='+product4+'&product5='+product5+'&product6='+product6+'&product7='+product7+'&product8='+product8+'&product9='+product9+'&product10='+product10+'&price1='+price1+'&price2='+price2+'&price3='+price3+'&price4='+price4+'&price5='+price5+'&price6='+price6+'&price7='+price7+'&price8='+price8+'&price9='+price9+'&price10='+price10+'&size1='+size1+'&size2='+size2+'&size3='+size3+'&size4='+size4+'&size5='+size5+'&size6='+size6+'&size7='+size7+'&size8='+size8+'&size9='+size9+'&size10='+size10+'&paytype=PayPal';
+	}
+	if  (payoption == 'pesapal') {
+	window.location.href = 'http://alcodrop247.com/gopesapal.php?customername='+customername+'&customeremail='+customeremail+'&customerphone='+customerphone+'&customerage='+customerage+'&locationinnairobi='+locationinnairobi+'&latview='+latview+'&longview='+longview+'&total='+total+'&totalusd='+totalusd+'&product1='+product1+'&product2='+product2+'&product3='+product3+'&product4='+product4+'&product5='+product5+'&product6='+product6+'&product7='+product7+'&product8='+product8+'&product9='+product9+'&product10='+product10+'&price1='+price1+'&price2='+price2+'&price3='+price3+'&price4='+price4+'&price5='+price5+'&price6='+price6+'&price7='+price7+'&price8='+price8+'&price9='+price9+'&price10='+price10+'&size1='+size1+'&size2='+size2+'&size3='+size3+'&size4='+size4+'&size5='+size5+'&size6='+size6+'&size7='+size7+'&size8='+size8+'&size9='+size9+'&size10='+size10+'&paytype=PesaPal';
+	}
+
+}
 </script>
 
 </head>
 <body>
+
+<div id="choosepaymentoptions" class="animated fadeIn">
+<h1>Choose Payment Option</h1>
+
+<img class="paymentprovider" onClick="localStorage.setItem('payoption','pesapal');paystart();" src="pesapal-logo.png"><br>
+<img class="paymentprovider" onClick="localStorage.setItem('payoption','pesapal');paystart();" src="pesapaloptions.jpg"><br><br>
+<img class="paymentprovider" onClick="localStorage.setItem('payoption','paypal');paystart();" src="paypal-logo.png"><br>
+<img class="paymentprovider" onClick="localStorage.setItem('payoption','paypal');paystart();" src="visamastercard.png"><br>
+
+</div>
 
 <div id="devoptions">
 </div>
@@ -313,34 +484,82 @@ function ajaxorderform() {
 <div id="lat-view" style="display:none" class="lat-view"></div>
 <div id="long-view" style="display:none" class="long-view"></div>
 <h1>Order Details</h1>
+
 <form id="proceedorderform1" action="javascript:ajaxorderform();">
-<input id="customeremail" required type="email" placeholder="E-Mail"><br>
 
 <input id="customername" required type="text" placeholder="Name"><br>
 
+<input id="customeremail" required type="email" placeholder="E-Mail"><br>
+
 <input id="customerphone" required type="tel" placeholder="Phone"><br>
 
-<input id="customerage" required type="number" placeholder="Age">
-<h1>Choose Area</h1>
+<input id="customerage" required min="18" type="number" placeholder="Age">
+
 <div class="notice">
 Alcodrop 24 7 is currently only available in Nairobi. We are adding more locations soon.
 </div>
+
 <select id="chooseareainnairobi">
-  <option value="CBD">CBD</option>
+  <option value="CBD">CBD (Town)</option>
   <option value="Dagoretti">Dagoretti</option>
   <option value="Doonholm">Doonholm</option>
-  <option value="Eastleigh ">Eastleigh </option>
+  <option value="Eastleigh">Eastleigh </option>
+  <option value="Embakasi">Embakasi </option>
   <option value="Gigiri">Gigiri</option>
   <option value="Highridge">Highridge</option>
+  <option value="Highrise">Highrise</option>
   <option value="Hurlingham">Hurlingham</option>
+  <option value="Industrial Area">Industrial Area</option>
   <option value="Jamhuri">Jamhuri</option>
   <option value="Karen">Karen</option>
+  <option value="Karen Hardy">Karen Hardy</option>
+  <option value="Karen Miotoni">Karen Miotoni</option>
+  <option value="Karen Plains">Karen Plains</option>
+  <option value="Karen Windy Ridge">Karen Windy Ridge</option>
+  <option value="Kiambu">Kiambu</option>
   <option value="Kassarani">Kassarani</option>
-  <option value="Kileleshwa ">Kileleshwa </option>
+  <option value="Kileleshwa">Kileleshwa</option>
   <option value="Kilimani">Kilimani</option>
+  <option value="Kitusuru">Kitusuru</option>
+  <option value="Langata">Langata</option>
+  <option value="Lavington">Lavington</option>
+  <option value="Loresho">Loresho</option>
+  <option value="Lower Kabete">Lower Kabete</option>
+  <option value="Mombasa Road">Mombasa Road</option>
+  <option value="Muthaiga">Muthaiga</option>
+  <option value="New Muthaiga">New Muthaiga</option>
+  <option value="Old Muthaiga">Old Muthaiga</option>
+  <option value="Nairobi West">Nairobi West</option>
+  <option value="Ngei">Ngei</option>
+  <option value="Ngong Road">Ngong Road</option>
+  <option value="Ngumo">Ngumo</option>
+  <option value="Nyari">Nyari</option>
+  <option value="Pangani">Pangani</option>
+  <option value="Parklands">Parklands</option>
+  <option value="Roselyn">Roselyn</option>
+  <option value="Runda">Runda</option>
+  <option value="South B">South B</option>
+  <option value="South C">South C</option>
+  <option value="Spring Valley">Spring Valley</option>
+  <option value="Thika Road">Thika Road</option>
+  <option value="Thome">Thome</option>
+  <option value="Upper Hill">Upper Hill</option>
+  <option value="Valley Arcade">Valley Arcade</option>
+  <option value="Westlands">Westlands</option>
+  <option value="Windsor">Windsor</option>
+  <option value="Woodley">Woodley</option>
+  <option value="Other">Other (Not in list)</option>
 </select>
+<div style="clear:both"></div>
+<div class="notice">
+<input style="width:auto !important; width:20px !important; height:20px !important;" required name="tandc" type="checkbox" value="tandc"> I have read and agreed to the <br>
+Terms & Conditions.
+</div>
+
 <button class="opencartwindowbutton"  onClick="proceedwithorderformsubmit();">Next</button>
 <input style="display:none" id="proceedorderform1submit" name="Submit" type="submit" value="Submit">
+
+
 </form>
 </center>
 </div>
@@ -500,6 +719,8 @@ Alcodrop 24 7 is currently only available in Nairobi. We are adding more locatio
 
 <div style="clear:both"></div>
 
+<div class="notice2">Free delivery on all orders!</div>
+
 <div class="opencartwindowbutton" onClick="openorderwindow();">Order now!</div>
 <div id="continueshoppingbuttononorder" class="opencartwindowbutton" onClick="closecartwindow();">Continue Shopping</div>
 </div>
@@ -507,7 +728,7 @@ Alcodrop 24 7 is currently only available in Nairobi. We are adding more locatio
 <div id="mainholder">
 
 <div id="navigation">
-<img src="logoinapp.png" onClick="$( "#page" ).load("start.html");">
+<img src="logoinapp.png" onClick="$( '#page' ).load('start.html');$( '#mainmenu' ).val('start');">
 <select id="mainmenu">
 <option value="start">Drinks selection:</option>
 <option value="p1">IMPORTED WHISKIES</option>
