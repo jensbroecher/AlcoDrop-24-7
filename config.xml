@@ -18,9 +18,7 @@
     </author>
 	
 	<icon src="icon.png" />
-	
-	<application android:hardwareAccelerated="true" />
-	
+		
 	<preference name="android-minSdkVersion" value="19" /> 
 	
 	<!-- Core plugins -->
