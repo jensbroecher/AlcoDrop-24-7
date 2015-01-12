@@ -4,22 +4,21 @@ table {
 	margin-bottom: 10px;
 }
 .addtocart {
-	color: #FFF;
-	background-color: #000;
+	color: #000;
+	background-color: #FFF;
 	text-align: center;
 	width: 110px;
 	max-width: 400px;
 	padding: 6px;
 	margin-right: 10px;
-	font-size: 12px;
-}
-.addtocart:hover {
-	background-color: #666;
+	font-size: 13px;
+	border: 2px solid #000;
+	border-radius:3px;
 }
 table td {
 	width: 33%;
 	text-align: center;
-	font-size: 12px;
+	font-size: 13px;
 }
 table img {
 	width: 100%;
