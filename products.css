@@ -15,6 +15,10 @@ table {
 	border: 2px solid #000;
 	border-radius:3px;
 }
+.addtocart:hover {
+	color: #FFF;
+	background-color: #000;
+}
 table td {
 	width: 33%;
 	text-align: center;
