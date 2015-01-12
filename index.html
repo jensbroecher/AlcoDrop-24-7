@@ -464,13 +464,13 @@ function paystart() {
 
 <div id="splashstart" style="text-align:center; position:absolute; width:100%; height:100%; background-image: url(barbg.jpg); background-repeat: no-repeat; background-position: center top; background-size: 100% 100% !important; background-color:#000; z-index:1000;">
 <br><br><br><br>
-<img src="drop.png" class="animated fadeIn" width="60%" style="margin-left:-10px;">
-<div id="warning" class="animated fadeIn">Alcohol is not for sale to persons under 18</div>
+<img src="drop.png" class="animated fadeIn" width="60%" style="margin-left:-10px; -webkit-animation-delay: 2s;">
+<div id="warning" class="animated fadeIn" style="-webkit-animation-delay: 2s;">Alcohol is not for sale to persons under 18</div>
 <div id="selectdrink" class="animated fadeIn" onclick="
 document.getElementById('splashstart').className = 'animated fadeOut';setTimeout(function(){
 document.getElementById('splashstart').style.display='none';},1000);
-document.getElementById('page').style.display='block';
-">Select Drink</div>
+document.getElementById('page').style.display='block';location.href = '#START';
+" style="-webkit-animation-delay: 2s;">Select Drink</div>
 </div>
 
 <div id="choosepaymentoptions" class="animated fadeIn">
@@ -739,8 +739,8 @@ Terms & Conditions.
 <div id="mainholder">
 
 <div id="navigation">
-<img src="logoinapp.png" onClick="$( '#page' ).load('start.html');$( '#mainmenu' ).val('start');">
-<select id="mainmenu">
+<img src="logoinapp.png" onClick="$( '#page' ).load('start.html');$( '#mainmenu' ).val('start');location.href = '#START';">
+<select id="mainmenu" onchange="optionCheck()">
 <option value="start">Drinks selection:</option>
 <option value="p1">IMPORTED WHISKIES</option>
 <option value="p1b">SINGLEMALT WHISKIES</option>
@@ -754,6 +754,51 @@ Terms & Conditions.
 <option value="p9">LOCAL CANES/BRANDY/WHISKIES</option>
 <option value="p10">ENERGY DRINKS</option>
 </select>
+
+<script type="text/javascript">
+    function optionCheck(){
+		
+		var option = document.getElementById("mainmenu").value;
+				
+		if(option == "start"){
+           location.href = '#START';
+        }
+        if(option == "p1"){
+            location.href = '#IMPORTEDWHISKIES';
+        }
+		if(option == "p1b"){
+            location.href = '#SINGLEMALTWHISKIES';
+        }
+		if(option == "p2"){
+            location.href = '#COGNACS';
+        }
+		if(option == "p3"){
+            location.href = '#RUM';
+        }
+		if(option == "p4"){
+            location.href = '#TEQUILLAS';
+        }
+		if(option == "p5"){
+            location.href = '#APPERTIFFS';
+        }
+		if(option == "p6"){
+            location.href = '#CHAMPAGNE';
+        }
+		if(option == "p7"){
+            location.href = '#GINS';
+        }
+		if(option == "p8"){
+            location.href = '#VODKAS';
+        }
+		if(option == "p9"){
+            location.href = '#LOCALCANES';
+        }
+		if(option == "p10"){
+            location.href = '#ENERGYDRINKS';
+        }
+		
+    }
+</script>
 </div>
 
 
@@ -762,6 +807,82 @@ Terms & Conditions.
 </div>
 
 </div>
+
+<script type="text/javascript">
+var hash = false; 
+checkHash();
+
+function checkHash(){ 
+    if(window.location.hash != hash) { 
+        hash = window.location.hash; 
+        processHash(hash); 
+    } t=setTimeout("checkHash()",200); 
+}
+
+function processHash(hash){
+    // alert(hash);
+	if (hash == "#START") {
+		$( '#page' ).load('start.html');
+		$( '#mainmenu' ).val('start');
+		$("html, body").animate({ scrollTop: 0 }, "slow");
+	}
+	else if (hash == "#IMPORTEDWHISKIES") {
+		$( '#page' ).load('p1.html');
+		$( '#mainmenu' ).val('p1');
+		$("html, body").animate({ scrollTop: 0 }, "slow");
+	}
+	else if (hash == "#SINGLEMALTWHISKIES") {
+		$( '#page' ).load('p1b.html');
+		$( '#mainmenu' ).val('p1b');
+		$("html, body").animate({ scrollTop: 0 }, "slow");
+	}
+	else if (hash == "#COGNACS") {
+		$( '#page' ).load('p2.html');
+		$( '#mainmenu' ).val('p2');
+		$("html, body").animate({ scrollTop: 0 }, "slow");
+	}
+	else if (hash == "#RUM") {
+		$( '#page' ).load('p3.html');
+		$( '#mainmenu' ).val('p3');
+		$("html, body").animate({ scrollTop: 0 }, "slow");
+	}
+	else if (hash == "#TEQUILLAS") {
+		$( '#page' ).load('p4.html');
+		$( '#mainmenu' ).val('p4');
+		$("html, body").animate({ scrollTop: 0 }, "slow");
+	}
+	else if (hash == "#APPERTIFFS") {
+		$( '#page' ).load('p5.html');
+		$( '#mainmenu' ).val('p5');
+		$("html, body").animate({ scrollTop: 0 }, "slow");
+	}
+	else if (hash == "#CHAMPAGNE") {
+		$( '#page' ).load('p6.html');
+		$( '#mainmenu' ).val('p6');
+		$("html, body").animate({ scrollTop: 0 }, "slow");
+	}
+	else if (hash == "#GINS") {
+		$( '#page' ).load('p7.html');
+		$( '#mainmenu' ).val('p7');
+		$("html, body").animate({ scrollTop: 0 }, "slow");
+	}
+	else if (hash == "#VODKAS") {
+		$( '#page' ).load('p8.html');
+		$( '#mainmenu' ).val('p8');
+		$("html, body").animate({ scrollTop: 0 }, "slow");
+	}
+	else if (hash == "#LOCALCANES") {
+		$( '#page' ).load('p9.html');
+		$( '#mainmenu' ).val('p9');
+		$("html, body").animate({ scrollTop: 0 }, "slow");
+	}
+	else if (hash == "#ENERGYDRINKS") {
+		$( '#page' ).load('p10.html');
+		$( '#mainmenu' ).val('p10');
+		$("html, body").animate({ scrollTop: 0 }, "slow");
+	}
+}
+</script>
 
 </body>
 </html>
