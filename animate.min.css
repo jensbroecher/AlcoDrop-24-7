@@ -38,6 +38,10 @@
 	-webkit-animation-delay: 1s;
 	animation-delay: 1s;
 }
+.andel11 {
+	-webkit-animation-delay: 1.1s;
+	animation-delay: 1.1s;
+}
 .animated {
 	-webkit-animation-duration: 1s;
 	-moz-animation-duration: 1s;
@@ -3321,6 +3325,19 @@ body {
 	font-family: sans-serif;
 }
 @-webkit-keyframes gogo {
+0% {
+opacity:0;
+transform-style: preserve-3d;
+perspective: 40px;
+transform: scale(0);
+transform-origin: 5% -31%;
+}
+100% {
+opacity:1;
+transform-style: preserve-3d;
+}
+}
+@keyframes gogo {
 0% {
 opacity:0;
 transform-style: preserve-3d;
