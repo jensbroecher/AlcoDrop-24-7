@@ -36,14 +36,18 @@ body {
 }
 #summaryboxes div {
 	float: left;
-	width: 33.3%;
+	width: 25%;
 	text-align: center;
 	overflow: hidden;
 	font-size: 12px;
 	font-weight: bold;
-	line-height: 150%;
-	margin: 0px;
+	line-height: 120%;
 	padding: 0px;
+	color: #000;
+	margin-top: 10px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
 }
 #summarycartwindow {
 	margin-top: 7px;
