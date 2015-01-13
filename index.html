@@ -272,6 +272,7 @@ function proceedwithorder1() {
 	document.getElementById('proceedwithorder1').style.display='block';
 	document.getElementById('pagebg').style.backgroundColor="white";
 	document.getElementById('ordernowwindow').style.display='none';
+	document.getElementById('opencartwindow').style.display='none';
 	document.getElementById('page').style.display='none';
 	}
 }
@@ -569,22 +570,20 @@ Alcodrop 24 7 is currently only available in Nairobi. We are adding more locatio
 
 <div style="clear:both"></div>
 
-<table align="center" class="notice3">
-<tr><td>
+<table id="tandc" align="center">
+<tr><td align="center" style="width:5% !important;" >
 
-<div style="float:left; padding-right:10px;">
-    <input style="width:20px !important; height:20px !important;" required name="tandc" type="checkbox" value="tandc">
-</div>
+    <input style="width:20px !important; height:20px !important; margin-top:10px;" required name="tandc" type="checkbox" value="tandc">
 
-<div style="float:left">
-I have read and agreed to the<br>
-Terms & Conditions.</div>
+</td>
+<td align="center">
+
+I have read and agreed to the <span style="text-decoration:underline;">Terms & Conditions</span>
  
 </td></tr></table>
 
 <button class="opencartwindowbutton"  onClick="proceedwithorderformsubmit();">Choose Payment Method</button>
 <input style="display:none" id="proceedorderform1submit" name="Submit" type="submit" value="Submit">
-
 
 </form>
 
