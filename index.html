@@ -234,6 +234,11 @@ $.ajaxSetup({
 
 
 $( document ).ready(function() {
+	
+	document.getElementById("customername").value = localStorage.getItem('customername');
+	document.getElementById("customeremail").value = localStorage.getItem('customeremail');
+	document.getElementById("customerphone").value = localStorage.getItem('customerphone');
+	document.getElementById("customerage").value = localStorage.getItem('customerage');
 
     $('#mainmenu').on('change', function() {
  // alert( this.value ); // or $(this).val()
@@ -289,6 +294,8 @@ function disp(pos) {
 }
 
 function ajaxorderform() {
+	
+	
 	localStorage.removeItem('product');
 	localStorage.removeItem('size');
 	localStorage.removeItem('price');
