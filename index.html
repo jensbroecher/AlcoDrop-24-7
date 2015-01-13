@@ -270,6 +270,9 @@ function proceedwithorder1() {
     }
 	else {
 	document.getElementById('proceedwithorder1').style.display='block';
+	document.getElementById('pagebg').style.backgroundColor="white";
+	document.getElementById('ordernowwindow').style.display='none';
+	document.getElementById('page').style.display='none';
 	}
 }
 function proceedwithorderformsubmit() {
@@ -395,6 +398,7 @@ function ajaxorderform() {
 	// alert(longview);
 	
 	document.getElementById('choosepaymentoptions').style.display='block';
+	document.getElementById('proceedwithorder1').style.display='none';
 }
 function paystart() {
 	var payoption = localStorage.getItem('payoption');
@@ -460,7 +464,8 @@ function paystart() {
 </script>
 
 </head>
-<body>
+
+<body id="pagebg">
 
 <div id="splashstart" style="text-align:center; position:absolute; width:100%; height:100%; background-image: url(barbg.jpg); background-repeat: no-repeat; background-position: center top; background-size: 100% 100% !important; background-color:#000; z-index:1000;">
 <br><br><br><br>
@@ -561,17 +566,30 @@ Alcodrop 24 7 is currently only available in Nairobi. We are adding more locatio
   <option value="Woodley">Woodley</option>
   <option value="Other">Other (Not in list)</option>
 </select>
+
 <div style="clear:both"></div>
-<div class="notice">
-<input style="width:auto !important; width:20px !important; height:20px !important;" required name="tandc" type="checkbox" value="tandc"> I have read and agreed to the <br>
-Terms & Conditions.
+
+<table align="center" class="notice3">
+<tr><td>
+
+<div style="float:left; padding-right:10px;">
+    <input style="width:20px !important; height:20px !important;" required name="tandc" type="checkbox" value="tandc">
 </div>
 
-<button class="opencartwindowbutton"  onClick="proceedwithorderformsubmit();">Next</button>
+<div style="float:left">
+I have read and agreed to the<br>
+Terms & Conditions.</div>
+ 
+</td></tr></table>
+
+<button class="opencartwindowbutton"  onClick="proceedwithorderformsubmit();">Choose Payment Method</button>
 <input style="display:none" id="proceedorderform1submit" name="Submit" type="submit" value="Submit">
 
 
 </form>
+
+<div style="clear:both"></div>
+
 </center>
 </div>
 
@@ -580,125 +598,65 @@ Terms & Conditions.
 
 <div id="summaryboxes">
 
-<table border="0" width="100%">
-  <tr>
-    <td>
-
 <div class="animated fadeIn andel1" id="product1"></div>
 <div class="animated fadeIn andel1"><span id="size1"></span> </div>
 <div class="animated fadeIn andel1"><span id="price1"></span> </div>
 
-    </td>
-  </tr>
-</table>
-
-<table border="0" width="100%">
-  <tr>
-    <td>
+<div style="clear:both"></div>
 
 <div class="animated fadeIn andel2" id="product2"></div>
 <div class="animated fadeIn andel2"><span id="size2"></span> </div>
 <div class="animated fadeIn andel2"><span id="price2"></span> </div>
 
-    </td>
-  </tr>
-</table>
-
-<table border="0" width="100%">
-  <tr>
-    <td>
+<div style="clear:both"></div>
 
 <div class="animated fadeIn andel3" id="product3"></div>
 <div class="animated fadeIn andel3"><span id="size3"></span> </div>
 <div class="animated fadeIn andel3"><span id="price3"></span> </div>
 
-    </td>
-  </tr>
-</table>
-
-<table border="0" width="100%">
-  <tr>
-    <td>
+<div style="clear:both"></div>
 
 <div class="animated fadeIn andel4" id="product4"></div>
 <div class="animated fadeIn andel4"><span id="size4"></span> </div>
 <div class="animated fadeIn andel4"><span id="price4"></span> </div>
 
-    </td>
-  </tr>
-</table>
-
-<table border="0" width="100%">
-  <tr>
-    <td>
+<div style="clear:both"></div>
 
 <div class="animated fadeIn andel5" id="product5"></div>
 <div class="animated fadeIn andel5"><span id="size5"></span> </div>
 <div class="animated fadeIn andel5"><span id="price5"></span> </div>
 
-    </td>
-  </tr>
-</table>
-
-<table border="0" width="100%">
-  <tr>
-    <td>
+<div style="clear:both"></div>
 
 <div class="animated fadeIn andel6" id="product6"></div>
 <div class="animated fadeIn andel6"><span id="size6"></span> </div>
 <div class="animated fadeIn andel6"><span id="price6"></span> </div>
 
-    </td>
-  </tr>
-</table>
-
-<table border="0" width="100%">
-  <tr>
-    <td>
+<div style="clear:both"></div>
 
 <div class="animated fadeIn andel7" id="product7"></div>
 <div class="animated fadeIn andel7"><span id="size7"></span> </div>
 <div class="animated fadeIn andel7"><span id="price7"></span> </div>
 
-    </td>
-  </tr>
-</table>
-
-<table border="0" width="100%">
-  <tr>
-    <td>
+<div style="clear:both"></div>
 
 <div class="animated fadeIn andel8" id="product8"></div>
 <div class="animated fadeIn andel8"><span id="size8"></span> </div>
 <div class="animated fadeIn andel8"><span id="price8"></span> </div>
 
-    </td>
-  </tr>
-</table>
-
-<table border="0" width="100%">
-  <tr>
-    <td>
+<div style="clear:both"></div>
 
 <div class="animated fadeIn andel9" id="product9"></div>
 <div class="animated fadeIn andel9"><span id="size9"></span> </div>
 <div class="animated fadeIn andel9"><span id="price9"></span> </div>
 
-    </td>
-  </tr>
-</table>
-
-<table border="0" width="100%">
-  <tr>
-    <td>
+<div style="clear:both"></div>
 
 <div class="animated fadeIn andel10" id="product10"></div>
 <div class="animated fadeIn andel10"><span id="size10"></span> </div>
 <div class="animated fadeIn andel10"><span id="price10"></span> </div>
 
-    </td>
-  </tr>
-</table>
+<div style="clear:both"></div>
 
 
 </div>
@@ -714,7 +672,9 @@ Terms & Conditions.
 
 <div class="opencartwindowbutton2" onClick="closeorderwindow();">Continue Shopping</div>
 
-<br><br>
+<div style="clear:both"></div>
+
+<br><br><br><br>
 
 </div>
 
