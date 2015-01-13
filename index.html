@@ -239,6 +239,14 @@ $( document ).ready(function() {
 	document.getElementById("customeremail").value = localStorage.getItem('customeremail');
 	document.getElementById("customerphone").value = localStorage.getItem('customerphone');
 	document.getElementById("customerage").value = localStorage.getItem('customerage');
+	
+	document.getElementById("chooseareainnairobi").onchange = function() {
+     localStorage['chooseareainnairobi'] = document.getElementById("chooseareainnairobi").value;
+    }
+    window.onload= function(){
+        if(localStorage['chooseareainnairobi'])
+            document.getElementById("chooseareainnairobi").value = localStorage['chooseareainnairobi'];
+    }
 
     $('#mainmenu').on('change', function() {
  // alert( this.value ); // or $(this).val()
