@@ -98,7 +98,10 @@ if (closeit == true) {
 
 function opencartwindow() {
 var valuefrompromt = prompt("Quantity?", "1");
-
+while(valuefrompromt.length > 3){
+alert("Keep the length to 3 chars or less");
+valuefrompromt = prompt("Quantity?", "1");
+}
 if (valuefrompromt != null) {
 localStorage.setItem('numberofproducts',valuefrompromt);
 opencartwindow2();
