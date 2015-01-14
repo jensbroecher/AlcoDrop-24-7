@@ -27,6 +27,7 @@ table {
 	padding-top: 5px;
 	padding-bottom: 5px;
 	border: 2px solid #000;
+	background-color: #FFF;
 }
 
 table td {
@@ -37,4 +38,11 @@ table td {
 table img {
 	width: 100%;
 	height: auto;
+}
+ul {
+	text-align: left !important;
+}
+ul li {
+	text-align: left !important;
+	list-style-type: square !important;
 }
