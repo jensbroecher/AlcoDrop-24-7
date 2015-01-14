@@ -34,20 +34,41 @@ body {
 	padding-top: 2px;
 	padding-bottom: 2px;
 }
+#summaryboxes {
+	margin: 5px;
+	padding: 5px;
+	height: 250px;
+	border: 2px solid #999;
+	overflow: auto;
+}
+#bottommenu {
+	background-color: #FFF;
+	position: fixed;
+	z-index: 90;
+	height: 60px;
+	width: 100%;
+	bottom: 0px;
+	display: none;
+}
+
 #summaryboxes div {
 	float: left;
 	width: 25%;
 	text-align: center;
 	overflow: hidden;
 	font-size: 12px;
-	font-weight: bold;
-	line-height: 120%;
 	padding: 0px;
-	color: #000;
-	margin-top: 10px;
+	margin-top: 0px;
 	margin-right: 0px;
 	margin-bottom: 0px;
 	margin-left: 0px;
+	background-color: #transparent !important;
+}
+#summaryboxes table {
+	color: #000;
+	margin-right: 5px;
+	margin-left: 5px;
+	background-color: #transparent !important;
 }
 #summarycartwindow {
 	margin-top: 7px;
@@ -105,15 +126,11 @@ body {
 }
 #ordernowwindow {
 	background-color: #FFF;
-	height: 1000px;
+	height: 500px;
 	width: 100%;
 	position: absolute;
 	z-index: 100;
 	display: none;
-	background-image: url(fadedlogo.png);
-	background-repeat: repeat-y;
-	background-position: center center;
-	background-size: contain;
 }
 #proceedwithorder1 {
 	background-color: #FFFFFF;
@@ -163,13 +180,15 @@ body {
 	font-weight: normal;
 }
 .notice2 {
-	background-color: #FFF;
-	padding: 5px;
-	border-radius: 10px;
-	margin: 5px;
+	background-color: #FF0;
 	font-size: 14px;
-	font-weight: normal;
+	font-weight: bold;
 	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding-bottom: 7px;
+	color: #000;
+	padding-top: 7px;
 }
 #tandc {
 	color: #666;

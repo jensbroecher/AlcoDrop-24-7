@@ -21,46 +21,52 @@ function clearall() {
 	document.getElementById('product1').innerHTML = '';
 	document.getElementById('size1').innerHTML = '';
 	document.getElementById('price1').innerHTML = '';
+	document.getElementById('quantity1').innerHTML = '';
 	
 	document.getElementById('product2').innerHTML = '';
 	document.getElementById('size2').innerHTML = '';
 	document.getElementById('price2').innerHTML = '';
+	document.getElementById('quantity2').innerHTML = '';
 	
 	document.getElementById('product3').innerHTML = '';
 	document.getElementById('size3').innerHTML = '';
 	document.getElementById('price3').innerHTML = '';
+	document.getElementById('quantity3').innerHTML = '';
 	
 	document.getElementById('product4').innerHTML = '';
 	document.getElementById('size4').innerHTML = '';
 	document.getElementById('price4').innerHTML = '';
-	
-	document.getElementById('product4').innerHTML = '';
-	document.getElementById('size4').innerHTML = '';
-	document.getElementById('price4').innerHTML = '';
-	
+	document.getElementById('quantity4').innerHTML = '';
+
 	document.getElementById('product5').innerHTML = '';
 	document.getElementById('size5').innerHTML = '';
 	document.getElementById('price5').innerHTML = '';
+	document.getElementById('quantity5').innerHTML = '';
 	
 	document.getElementById('product6').innerHTML = '';
 	document.getElementById('size6').innerHTML = '';
 	document.getElementById('price6').innerHTML = '';
+	document.getElementById('quantity6').innerHTML = '';
 	
 	document.getElementById('product7').innerHTML = '';
 	document.getElementById('size7').innerHTML = '';
 	document.getElementById('price7').innerHTML = '';
+	document.getElementById('quantity7').innerHTML = '';
 	
 	document.getElementById('product8').innerHTML = '';
 	document.getElementById('size8').innerHTML = '';
 	document.getElementById('price8').innerHTML = '';
+	document.getElementById('quantity8').innerHTML = '';
 	
 	document.getElementById('product9').innerHTML = '';
 	document.getElementById('size9').innerHTML = '';
 	document.getElementById('price9').innerHTML = '';
+	document.getElementById('quantity9').innerHTML = '';
 	
 	document.getElementById('product10').innerHTML = '';
 	document.getElementById('size10').innerHTML = '';
 	document.getElementById('price10').innerHTML = '';
+	document.getElementById('quantity10').innerHTML = '';
 	
 	document.getElementById('totalammount').innerHTML = 0;
 	document.getElementById('totalammount2').innerHTML = 0;
@@ -92,8 +98,11 @@ if (closeit == true) {
 
 function opencartwindow() {
 var valuefrompromt = prompt("Quantity?", "1");
+
+if (valuefrompromt != null) {
 localStorage.setItem('numberofproducts',valuefrompromt);
 opencartwindow2();
+}
 }
 function opencartwindow2() {
 	
@@ -262,6 +271,8 @@ $.ajaxSetup({
 
 $( document ).ready(function() {
 	
+	location.href = '#SPLASH';
+	
 	document.getElementById("customername").value = localStorage.getItem('customername');
 	document.getElementById("customeremail").value = localStorage.getItem('customeremail');
 	document.getElementById("customerphone").value = localStorage.getItem('customerphone');
@@ -330,7 +341,6 @@ function disp(pos) {
 
 function ajaxorderform() {
 	
-	
 	localStorage.removeItem('product');
 	localStorage.removeItem('size');
 	localStorage.removeItem('price');
@@ -364,72 +374,102 @@ function ajaxorderform() {
 	var product1 = document.getElementById('product1').innerHTML;
 	var size1 = document.getElementById('size1').innerHTML;
 	var price1 = document.getElementById('price1').innerHTML;
+	var quantity1 = document.getElementById('quantity1').innerHTML;
+	
 	localStorage.setItem('product1',product1);
 	localStorage.setItem('size1',size1);
 	localStorage.setItem('price1',price1);
+	localStorage.setItem('quantity1',quantity1);
 	
 	var product2 = document.getElementById('product2').innerHTML;
 	var size2 = document.getElementById('size2').innerHTML;
 	var price2 = document.getElementById('price2').innerHTML;
+	var quantity2 = document.getElementById('quantity2').innerHTML;
+	
 	localStorage.setItem('product2',product2);
 	localStorage.setItem('size2',size2);
 	localStorage.setItem('price2',price2);
+	localStorage.setItem('quantity2',quantity2);
 	
 	var product3 = document.getElementById('product3').innerHTML;
 	var size3 = document.getElementById('size3').innerHTML;
 	var price3 = document.getElementById('price3').innerHTML;
+	var quantity3 = document.getElementById('quantity3').innerHTML;
+	
 	localStorage.setItem('product3',product3);
 	localStorage.setItem('size3',size3);
 	localStorage.setItem('price3',price3);
+	localStorage.setItem('quantity3',quantity3);
 	
 	var product4 = document.getElementById('product4').innerHTML;
 	var size4 = document.getElementById('size4').innerHTML;
 	var price4 = document.getElementById('price4').innerHTML;
+	var quantity4 = document.getElementById('quantity4').innerHTML;
+	
 	localStorage.setItem('product4',product4);
 	localStorage.setItem('size4',size4);
 	localStorage.setItem('price4',price4);
+	localStorage.setItem('quantity4',quantity4);
 	
 	var product5 = document.getElementById('product5').innerHTML;
 	var size5 = document.getElementById('size5').innerHTML;
 	var price5 = document.getElementById('price5').innerHTML;
+	var quantity5 = document.getElementById('quantity5').innerHTML;
+
 	localStorage.setItem('product5',product5);
 	localStorage.setItem('size5',size5);
 	localStorage.setItem('price5',price5);
+	localStorage.setItem('quantity5',quantity5);
 	
 	var product6 = document.getElementById('product6').innerHTML;
 	var size6 = document.getElementById('size6').innerHTML;
 	var price6 = document.getElementById('price6').innerHTML;
+	var quantity6 = document.getElementById('quantity6').innerHTML;
+
 	localStorage.setItem('product6',product6);
 	localStorage.setItem('size6',size6);
 	localStorage.setItem('price6',price6);
+	localStorage.setItem('quantity6',quantity6);
 	
 	var product7 = document.getElementById('product7').innerHTML;
 	var size7 = document.getElementById('size7').innerHTML;
 	var price7 = document.getElementById('price7').innerHTML;
+	var quantity7 = document.getElementById('quantity7').innerHTML;
+
 	localStorage.setItem('product7',product7);
 	localStorage.setItem('size7',size7);
 	localStorage.setItem('price7',price7);
+	localStorage.setItem('quantity7',quantity7);
 	
 	var product8 = document.getElementById('product8').innerHTML;
 	var size8 = document.getElementById('size8').innerHTML;
 	var price8 = document.getElementById('price8').innerHTML;
+	var quantity8 = document.getElementById('quantity8').innerHTML;
+
 	localStorage.setItem('product8',product8);
 	localStorage.setItem('size8',size8);
 	localStorage.setItem('price8',price8);
+	localStorage.setItem('quantity8',quantity8);
 	
 	var product9 = document.getElementById('product9').innerHTML;
 	var size9 = document.getElementById('size9').innerHTML;
 	var price9 = document.getElementById('price9').innerHTML;
+	var quantity9 = document.getElementById('quantity9').innerHTML;
+	
 	localStorage.setItem('product9',product9);
 	localStorage.setItem('size9',size9);
 	localStorage.setItem('price9',price9);
+	localStorage.setItem('quantity9',quantity9);
 	
 	var product10 = document.getElementById('product10').innerHTML;
 	var size10 = document.getElementById('size10').innerHTML;
 	var price10 = document.getElementById('price10').innerHTML;
+	var quantity10 = document.getElementById('quantity10').innerHTML;
+	
 	localStorage.setItem('product10',product10);
 	localStorage.setItem('size10',size10);
 	localStorage.setItem('price10',price10);
+	localStorage.setItem('quantity10',quantity10);
 	
 	// alert('Data sent to Server:');
 	// alert(locationinnairobi);
@@ -459,48 +499,58 @@ function paystart() {
 	var product1 = localStorage.getItem('product1');
 	var size1 = localStorage.getItem('size1');
 	var price1 = localStorage.getItem('price1');
+	var quantity1 = localStorage.getItem('quantity1');
 	
 	var product2 = localStorage.getItem('product2');
 	var size2 = localStorage.getItem('size2');
 	var price2 = localStorage.getItem('price2');
+	var quantity2 = localStorage.getItem('quantity2');
 	
 	var product3 = localStorage.getItem('product3');
 	var size3 = localStorage.getItem('size3');
 	var price3 = localStorage.getItem('price3');
+	var quantity3 = localStorage.getItem('quantity3');
 	
 	var product4 = localStorage.getItem('product4');
 	var size4 = localStorage.getItem('size4');
 	var price4 = localStorage.getItem('price4');
+	var quantity4 = localStorage.getItem('quantity4');
 	
 	var product5 = localStorage.getItem('product5');
 	var size5 = localStorage.getItem('size5');
 	var price5 = localStorage.getItem('price5');
+	var quantity5 = localStorage.getItem('quantity5');
 	
 	var product6 = localStorage.getItem('product6');
 	var size6 = localStorage.getItem('size6');
 	var price6 = localStorage.getItem('price6');
+	var quantity6 = localStorage.getItem('quantity6');
 	
 	var product7 = localStorage.getItem('product7');
 	var size7 = localStorage.getItem('size7');
 	var price7 = localStorage.getItem('price7');
+	var quantity7 = localStorage.getItem('quantity7');
 	
 	var product8 = localStorage.getItem('product8');
 	var size8 = localStorage.getItem('size8');
 	var price8 = localStorage.getItem('price8');
+	var quantity8 = localStorage.getItem('quantity8');
 	
 	var product9 = localStorage.getItem('product9');
 	var size9 = localStorage.getItem('size9');
 	var price9 = localStorage.getItem('price9');
+	var quantity9 = localStorage.getItem('quantity9');
 	
 	var product10 = localStorage.getItem('product10');
 	var size10 = localStorage.getItem('size10');
 	var price10 = localStorage.getItem('price10');
+	var quantity10 = localStorage.getItem('quantity10');
 	
 	if  (payoption == 'paypal') {
 	window.location.href = 'http://alcodrop247.com/gopaypal.php?customername='+customername+'&customeremail='+customeremail+'&customerphone='+customerphone+'&customerage='+customerage+'&locationinnairobi='+locationinnairobi+'&latview='+latview+'&longview='+longview+'&total='+total+'&totalusd='+totalusd+'&product1='+product1+'&product2='+product2+'&product3='+product3+'&product4='+product4+'&product5='+product5+'&product6='+product6+'&product7='+product7+'&product8='+product8+'&product9='+product9+'&product10='+product10+'&price1='+price1+'&price2='+price2+'&price3='+price3+'&price4='+price4+'&price5='+price5+'&price6='+price6+'&price7='+price7+'&price8='+price8+'&price9='+price9+'&price10='+price10+'&size1='+size1+'&size2='+size2+'&size3='+size3+'&size4='+size4+'&size5='+size5+'&size6='+size6+'&size7='+size7+'&size8='+size8+'&size9='+size9+'&size10='+size10+'&paytype=PayPal';
 	}
 	if  (payoption == 'pesapal') {
-	window.location.href = 'http://alcodrop247.com/gopesapal.php?customername='+customername+'&customeremail='+customeremail+'&customerphone='+customerphone+'&customerage='+customerage+'&locationinnairobi='+locationinnairobi+'&latview='+latview+'&longview='+longview+'&total='+total+'&totalusd='+totalusd+'&product1='+product1+'&product2='+product2+'&product3='+product3+'&product4='+product4+'&product5='+product5+'&product6='+product6+'&product7='+product7+'&product8='+product8+'&product9='+product9+'&product10='+product10+'&price1='+price1+'&price2='+price2+'&price3='+price3+'&price4='+price4+'&price5='+price5+'&price6='+price6+'&price7='+price7+'&price8='+price8+'&price9='+price9+'&price10='+price10+'&size1='+size1+'&size2='+size2+'&size3='+size3+'&size4='+size4+'&size5='+size5+'&size6='+size6+'&size7='+size7+'&size8='+size8+'&size9='+size9+'&size10='+size10+'&paytype=PesaPal';
+	window.location.href = 'http://alcodrop247.com/gopesapal.php?customername='+customername+'&customeremail='+customeremail+'&customerphone='+customerphone+'&customerage='+customerage+'&locationinnairobi='+locationinnairobi+'&latview='+latview+'&longview='+longview+'&total='+total+'&totalusd='+totalusd+'&product1='+product1+'&product2='+product2+'&product3='+product3+'&product4='+product4+'&product5='+product5+'&product6='+product6+'&product7='+product7+'&product8='+product8+'&product9='+product9+'&product10='+product10+'&price1='+price1+'&price2='+price2+'&price3='+price3+'&price4='+price4+'&price5='+price5+'&price6='+price6+'&price7='+price7+'&price8='+price8+'&price9='+price9+'&price10='+price10+'&size1='+size1+'&size2='+size2+'&size3='+size3+'&size4='+size4+'&size5='+size5+'&size6='+size6+'&size7='+size7+'&size8='+size8+'&size9='+size9+'&size10='+size10+'&quantity1='+quantity1+'&quantity2='+quantity2+'&quantity3='+quantity3+'&quantity4='+quantity4+'&quantity5='+quantity5+'&quantity6='+quantity6+'&quantity7='+quantity7+'&quantity8='+quantity8+'&quantity9='+quantity9+'&quantity10='+quantity10+'&paytype=PesaPal';
 	}
 
 }
@@ -509,6 +559,9 @@ function paystart() {
 </head>
 
 <body id="pagebg">
+
+<div id="bottommenu">
+</div>
 
 <div id="splashstart" style="text-align:center; position:absolute; width:100%; height:100%; background-image: url(barbg.jpg); background-repeat: no-repeat; background-position: center top; background-size: 100% 100% !important; background-color:#000; z-index:1000;">
 <br><br><br><br>
@@ -635,7 +688,7 @@ I have read and agreed to the <span style="text-decoration:underline;">Terms & C
 </div>
 
 <div id="ordernowwindow" class="animated gogo">
-<div class="titleincartwindow">Summary:</div>
+<div class="titleincartwindow">Shopping Cart Summary:</div>
 
 <div id="summaryboxes">
 
@@ -849,6 +902,11 @@ function processHash(hash){
 		$( '#mainmenu' ).val('start');
 		$("html, body").animate({ scrollTop: 0 }, "slow");
 	}
+	else if (hash == "#SPLASH") {
+		document.getElementById('splashstart').style.display='block';
+		document.getElementById('splashstart').className = 'animated fadeIn';
+		$("html, body").animate({ scrollTop: 0 }, "slow");
+	}
 	else if (hash == "#IMPORTEDWHISKIES") {
 		$( '#page' ).load('p1.html');
 		$( '#mainmenu' ).val('p1');
@@ -905,7 +963,10 @@ function processHash(hash){
 		$("html, body").animate({ scrollTop: 0 }, "slow");
 	}
 }
+
+
 </script>
+
 
 </body>
 </html>
