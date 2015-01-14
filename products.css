@@ -19,9 +19,16 @@ table {
 	padding-bottom: 6px;
 }
 .addtocart:hover {
-	color: #FFF;
-	background-color: #000;
+	background-color: #D4D4D4;
 }
+.selectvariant {
+	width: 100%;
+	border-radius: 3px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border: 2px solid #000;
+}
+
 table td {
 	width: 33%;
 	text-align: center;
