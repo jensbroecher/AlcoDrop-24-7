@@ -200,7 +200,6 @@ body {
 	margin-left: 10px;
 	border: 2px solid #CCC;
 }
-
 #spinner {
 	background-image: url(282.gif);
 	background-repeat: no-repeat;
@@ -243,7 +242,6 @@ h1 {
 	border-left-style: none;
 	font-size: 16px;
 }
-
 .opencartwindowbutton2 {
 	color: #FFF;
 	background-color: #999999;
@@ -264,7 +262,6 @@ h1 {
 	font-size: 16px;
 	font-weight: normal;
 }
-
 #navigation {
 	background-color: #FFF;
 	height: 40px;
@@ -306,6 +303,22 @@ h1 {
 	margin-left: 5%;
 	display: none;
 	margin-top: 15%;
+	padding: 5%;
+	font-size: 14px;
+}
+#tnc {
+	background-color: #FFF;
+	box-shadow: 0 0 35px 50px rgba(0,0,50,0.3);
+	transition: all 0.5s;
+	position: absolute;
+	z-index: 3000;
+	height: auto;
+	min-height: 100px;
+	width: 80%;
+	margin-right: 5%;
+	margin-left: 5%;
+	display: none;
+	margin-top: 5%;
 	padding: 5%;
 	font-size: 14px;
 }

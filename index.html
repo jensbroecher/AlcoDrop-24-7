@@ -560,6 +560,11 @@ function paystart() {
 
 <body id="pagebg">
 
+<div id="tnc" class="animated fadeIn">
+<iframe src="tnc.html" style="width:100%; height:300px;" frameborder="0"></iframe>
+<div class="opencartwindowbutton2" onClick="document.getElementById('tnc').style.display='none';">Close</div>
+</div>
+
 <div id="bottommenu">
 </div>
 
@@ -673,7 +678,7 @@ Alcodrop 24 7 is currently only available in Nairobi. We are adding more locatio
 </td>
 <td align="center">
 
-I have read and agreed to the <span style="text-decoration:underline;">Terms & Conditions</span>
+I have read and agreed to the <span onClick="document.getElementById('tnc').style.display='block';" style="text-decoration:underline;">Terms & Conditions</span>
  
 </td></tr></table>
 
