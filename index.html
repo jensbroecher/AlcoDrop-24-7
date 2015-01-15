@@ -96,15 +96,20 @@ if (closeit == true) {
 }
 }
 
+function isNumber(n) { return /^-?[\d.]+(?:e-?\d+)?$/.test(n); } 
+
 function opencartwindow() {
 var valuefrompromt = prompt("Quantity?", "1");
 while(valuefrompromt.length > 3){
 alert("Keep the length to 3 chars or less");
 valuefrompromt = prompt("Quantity?", "1");
 }
-if (valuefrompromt != null) {
+if ((valuefrompromt != null) && (isNumber (valuefrompromt))) {
 localStorage.setItem('numberofproducts',valuefrompromt);
 opencartwindow2();
+}
+else if (!isNumber (valuefrompromt)) {
+alert("Please enter a number!");
 }
 }
 function opencartwindow2() {

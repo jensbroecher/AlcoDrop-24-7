@@ -182,7 +182,7 @@ body {
 	font-weight: normal;
 }
 .notice2 {
-	background-color: #FF0;
+	background-color: #FFF;
 	font-size: 14px;
 	font-weight: bold;
 	text-align: center;
@@ -191,6 +191,7 @@ body {
 	padding-bottom: 7px;
 	color: #000;
 	padding-top: 7px;
+	border: 2px solid #FF0;
 }
 #tandc {
 	color: #666;
