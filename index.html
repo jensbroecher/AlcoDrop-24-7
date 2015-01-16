@@ -320,11 +320,11 @@ $( "#page" ).load(loadthis+".html");
 
 function proceedwithorder1() {
 	var currentotal = document.getElementById('totalammount2').innerHTML;
-	var requiredtotal = 1000;
+	var requiredtotal = 1;
 	navigator.geolocation.getCurrentPosition(disp);
 	
 	if (+currentotal < requiredtotal) {
-        alert("Sorry, minimum order price not reached! Order for 1000 KES and above and enjoy free delivery!");
+        alert("Sorry, minimum order price not reached! Order for 1500 KES and above and enjoy free delivery!");
         return false;
     }
 	else {
@@ -837,6 +837,7 @@ I have read and agreed to the <span onClick="document.getElementById('tnc').styl
 <option value="p3">WHITE RUM &amp; BLACK RUM</option>
 <option value="p4">TEQUILLAS/SHOOTERS</option>
 <option value="p5">APPERTIFFS/BITTERS</option>
+<option value="p11">WHINES</option>
 <option value="p6">CHAMPAGNE</option>
 <option value="p7">GINS</option>
 <option value="p8">VODKAS</option>
@@ -884,6 +885,9 @@ I have read and agreed to the <span onClick="document.getElementById('tnc').styl
         }
 		if(option == "p10"){
             location.href = '#ENERGYDRINKS';
+        }
+		if(option == "p10"){
+            location.href = '#WHINES';
         }
 		
     }
@@ -973,6 +977,11 @@ function processHash(hash){
 	else if (hash == "#ENERGYDRINKS") {
 		$( '#page' ).load('p10.html');
 		$( '#mainmenu' ).val('p10');
+		$("html, body").animate({ scrollTop: 0 }, "slow");
+	}
+	else if (hash == "#WHINES") {
+		$( '#page' ).load('p11.html');
+		$( '#mainmenu' ).val('p11');
 		$("html, body").animate({ scrollTop: 0 }, "slow");
 	}
 }
