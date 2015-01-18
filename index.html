@@ -14,8 +14,21 @@
 <script>
 
 function onDeviceReady() {
-		
+		parsePlugin.initialize('khkU5e54h04HNCvj8PxMb1H84aKyUHPdL1LAsTNB','34GXbwMD5F2dy9VqwH31UlA5T3nvJB4Z1M6qO8Ei', function() {
+        alert('success');
+    }, function(e) {
+        alert('error');
+    });
+
+    parsePlugin.getInstallationId(function(id) {
+        alert(id);
+    }, function(e) {
+        alert('error');
+    });
 }
+
+    
+
 
 function clearall() {
 	document.getElementById('product1').innerHTML = '';
