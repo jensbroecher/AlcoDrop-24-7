@@ -42,7 +42,7 @@
     <gap:plugin name="org.apache.cordova.splashscreen" />
     <gap:plugin name="org.apache.cordova.vibration" />
 	
-	<gap:plugin name="com.pushwoosh.plugins.pushwoosh" />
+	<gap:plugin name="com.parse.cordova.core.pushplugin" />
 	<gap:plugin name="de.appplant.cordova.plugin.local-notification" />
 	<gap:plugin name="com.phonegap.plugins.barcodescanner" />
 	<gap:plugin name="nl.x-services.plugins.socialsharing" />
