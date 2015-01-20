@@ -15,6 +15,8 @@
 <script>
 
 function onDeviceReady() {
+}
+
 parsePlugin.initialize('khkU5e54h04HNCvj8PxMb1H84aKyUHPdL1LAsTNB','34GXbwMD5F2dy9VqwH31UlA5T3nvJB4Z1M6qO8Ei', function() {
 
     parsePlugin.subscribe('alcodrop', function() {
@@ -42,9 +44,16 @@ parsePlugin.initialize('khkU5e54h04HNCvj8PxMb1H84aKyUHPdL1LAsTNB','34GXbwMD5F2dy
 }, function(e) {
     alert('error');
 });	
-}
 
 
+window.plugin.notification.local.add({
+    id:         1,  // A unique id of the notifiction
+    // date:       Date,    // This expects a date object
+    message:    'We recieved your order! Thank you for chosing AlcoDrop 24 7',  // The message that is displayed
+    title:      'Order Recieved',  // The title of the message
+    autoCancel: true, // Setting this flag and the notification is automatically canceled when the user clicks it
+    ongoing:    false, // Prevent clearing of notification (Android only)
+});
 
 
 function clearall() {
