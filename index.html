@@ -10,13 +10,14 @@
 
 <script src="jquery.min.js"></script>
 <script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="cdv-plugin-parse.js"></script>
 
 <script>
 
 function onDeviceReady() {
-	parsePlugin.initialize('khkU5e54h04HNCvj8PxMb1H84aKyUHPdL1LAsTNB','34GXbwMD5F2dy9VqwH31UlA5T3nvJB4Z1M6qO8Ei', function() {
+parsePlugin.initialize('khkU5e54h04HNCvj8PxMb1H84aKyUHPdL1LAsTNB','34GXbwMD5F2dy9VqwH31UlA5T3nvJB4Z1M6qO8Ei', function() {
 
-    parsePlugin.subscribe('SampleChannel', function() {
+    parsePlugin.subscribe('alcodrop', function() {
 
         parsePlugin.getInstallationId(function(id) {
 
