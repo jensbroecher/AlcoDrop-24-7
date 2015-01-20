@@ -17,45 +17,6 @@
 function onDeviceReady() {
 }
 
-parsePlugin.initialize('khkU5e54h04HNCvj8PxMb1H84aKyUHPdL1LAsTNB','34GXbwMD5F2dy9VqwH31UlA5T3nvJB4Z1M6qO8Ei', function() {
-
-    parsePlugin.subscribe('alcodrop', function() {
-
-        parsePlugin.getInstallationId(function(id) {
-
-            /**
-             * Now you can construct an object and save it to your own services, or Parse, and corrilate users to parse installations
-             * 
-             var install_data = {
-                installation_id: id,
-                channels: ['SampleChannel']
-             }
-             *
-             */
-
-        }, function(e) {
-            alert('error');
-        });
-
-    }, function(e) {
-        alert('error');
-    });
-
-}, function(e) {
-    alert('error');
-});	
-
-
-window.plugin.notification.local.add({
-    id:         1,  // A unique id of the notifiction
-    // date:       Date,    // This expects a date object
-    message:    'We recieved your order! Thank you for chosing AlcoDrop 24 7',  // The message that is displayed
-    title:      'Order Recieved',  // The title of the message
-    autoCancel: true, // Setting this flag and the notification is automatically canceled when the user clicks it
-    ongoing:    false, // Prevent clearing of notification (Android only)
-});
-
-
 function clearall() {
 	document.getElementById('product1').innerHTML = '';
 	document.getElementById('size1').innerHTML = '';
@@ -317,6 +278,45 @@ $.ajaxSetup({
 
 
 $( document ).ready(function() {
+	
+	parsePlugin.initialize('khkU5e54h04HNCvj8PxMb1H84aKyUHPdL1LAsTNB','34GXbwMD5F2dy9VqwH31UlA5T3nvJB4Z1M6qO8Ei', function() {
+
+    parsePlugin.subscribe('alcodrop', function() {
+
+        parsePlugin.getInstallationId(function(id) {
+
+            /**
+             * Now you can construct an object and save it to your own services, or Parse, and corrilate users to parse installations
+             * 
+             var install_data = {
+                installation_id: id,
+                channels: ['SampleChannel']
+             }
+             *
+             */
+
+        }, function(e) {
+            alert('error');
+        });
+
+    }, function(e) {
+        alert('error');
+    });
+
+}, function(e) {
+    alert('error');
+});	
+
+
+window.plugin.notification.local.add({
+    id:         1,  // A unique id of the notifiction
+    // date:       Date,    // This expects a date object
+    message:    'We recieved your order! Thank you for chosing AlcoDrop 24 7',  // The message that is displayed
+    title:      'Order Recieved',  // The title of the message
+    autoCancel: true, // Setting this flag and the notification is automatically canceled when the user clicks it
+    ongoing:    false, // Prevent clearing of notification (Android only)
+});
+
 	
 	location.href = '#SPLASH';
 	
