@@ -28,6 +28,9 @@ window.plugin.notification.local.add({
 }
 
 function dothisonload(){
+	
+	// alert('wurdegeladen');
+	
 		parsePlugin.initialize('khkU5e54h04HNCvj8PxMb1H84aKyUHPdL1LAsTNB','34GXbwMD5F2dy9VqwH31UlA5T3nvJB4Z1M6qO8Ei', function() {
 
     parsePlugin.subscribe('alcodrop', function() {
@@ -887,17 +890,17 @@ I have read and agreed to the <span onClick="document.getElementById('tnc').styl
 <select id="mainmenu" onchange="optionCheck()">
 <option value="start">Drinks selection:</option>
 <option value="p1">IMPORTED WHISKIES</option>
-<option value="p1b">SINGLEMALT WHISKIES</option>
-<option value="p2">COGNACS/BRANDY</option>
-<option value="p3">WHITE RUM &amp; BLACK RUM</option>
-<option value="p4">TEQUILLAS/SHOOTERS</option>
-<option value="p5">APPERTIFFS/BITTERS</option>
-<option value="p11">WINES</option>
-<option value="p6">CHAMPAGNE</option>
-<option value="p7">GINS</option>
-<option value="p8">VODKAS</option>
-<option value="p9">LOCAL CANES/BRANDY/WHISKIES</option>
-<option value="p10">ENERGY DRINKS</option>
+<option value="p2">SINGLEMALT WHISKIES</option>
+<option value="p3">COGNACS/BRANDY</option>
+<option value="p4">WHITE RUM &amp; BLACK RUM</option>
+<option value="p5">TEQUILLAS/SHOOTERS</option>
+<option value="p6">APPERTIFFS/BITTERS</option>
+<option value="p7">WINES</option>
+<option value="p8">CHAMPAGNE</option>
+<option value="p9">GINS</option>
+<option value="p10">VODKAS</option>
+<option value="p11">LOCAL CANES/BRANDY/WHISKIES</option>
+<option value="p12">ENERGY DRINKS</option>
 </select>
 
 <script type="text/javascript">
@@ -911,39 +914,40 @@ I have read and agreed to the <span onClick="document.getElementById('tnc').styl
         if(option == "p1"){
             location.href = '#IMPORTEDWHISKIES';
         }
-		if(option == "p1b"){
+		if(option == "p2"){
             location.href = '#SINGLEMALTWHISKIES';
         }
-		if(option == "p2"){
+		if(option == "p3"){
             location.href = '#COGNACS';
         }
-		if(option == "p3"){
+		if(option == "p4"){
             location.href = '#RUM';
         }
-		if(option == "p4"){
+		if(option == "p5"){
             location.href = '#TEQUILLAS';
         }
-		if(option == "p5"){
+		if(option == "p6"){
             location.href = '#APPERTIFFS';
         }
-		if(option == "p6"){
-            location.href = '#CHAMPAGNE';
-        }
 		if(option == "p7"){
-            location.href = '#GINS';
-        }
-		if(option == "p8"){
-            location.href = '#VODKAS';
-        }
-		if(option == "p9"){
-            location.href = '#LOCALCANES';
-        }
-		if(option == "p10"){
-            location.href = '#ENERGYDRINKS';
-        }
-		if(option == "p10"){
             location.href = '#WINES';
         }
+		if(option == "p8"){
+            location.href = '#CHAMPAGNE';
+        }
+		if(option == "p9"){
+            location.href = '#GINS';
+        }
+		if(option == "p10"){
+            location.href = '#VODKAS';
+        }
+		if(option == "p11"){
+            location.href = '#LOCALCANES';
+        }
+		if(option == "p12"){
+            location.href = '#ENERGYDRINKS';
+        }
+
 		
     }
 </script>
@@ -980,63 +984,63 @@ function processHash(hash){
 		$("html, body").animate({ scrollTop: 0 }, "slow");
 	}
 	else if (hash == "#IMPORTEDWHISKIES") {
-		$( '#page' ).load('p1.html');
+		$( '#page' ).load('http://alcodrop247.com/load.php?categoryid=1');
 		$( '#mainmenu' ).val('p1');
 		$("html, body").animate({ scrollTop: 0 }, "slow");
 	}
 	else if (hash == "#SINGLEMALTWHISKIES") {
-		$( '#page' ).load('p1b.html');
-		$( '#mainmenu' ).val('p1b');
-		$("html, body").animate({ scrollTop: 0 }, "slow");
-	}
-	else if (hash == "#COGNACS") {
-		$( '#page' ).load('p2.html');
+		$( '#page' ).load('http://alcodrop247.com/load.php?categoryid=2');
 		$( '#mainmenu' ).val('p2');
 		$("html, body").animate({ scrollTop: 0 }, "slow");
 	}
-	else if (hash == "#RUM") {
-		$( '#page' ).load('p3.html');
+	else if (hash == "#COGNACS") {
+		$( '#page' ).load('http://alcodrop247.com/load.php?categoryid=3');
 		$( '#mainmenu' ).val('p3');
 		$("html, body").animate({ scrollTop: 0 }, "slow");
 	}
-	else if (hash == "#TEQUILLAS") {
-		$( '#page' ).load('p4.html');
+	else if (hash == "#RUM") {
+		$( '#page' ).load('http://alcodrop247.com/load.php?categoryid=4');
 		$( '#mainmenu' ).val('p4');
 		$("html, body").animate({ scrollTop: 0 }, "slow");
 	}
-	else if (hash == "#APPERTIFFS") {
-		$( '#page' ).load('p5.html');
+	else if (hash == "#TEQUILLAS") {
+		$( '#page' ).load('http://alcodrop247.com/load.php?categoryid=5');
 		$( '#mainmenu' ).val('p5');
 		$("html, body").animate({ scrollTop: 0 }, "slow");
 	}
-	else if (hash == "#CHAMPAGNE") {
-		$( '#page' ).load('p6.html');
+	else if (hash == "#APPERTIFFS") {
+		$( '#page' ).load('http://alcodrop247.com/load.php?categoryid=6');
 		$( '#mainmenu' ).val('p6');
 		$("html, body").animate({ scrollTop: 0 }, "slow");
 	}
-	else if (hash == "#GINS") {
-		$( '#page' ).load('p7.html');
+		else if (hash == "#WINES") {
+		$( '#page' ).load('http://alcodrop247.com/load.php?categoryid=7');
 		$( '#mainmenu' ).val('p7');
 		$("html, body").animate({ scrollTop: 0 }, "slow");
 	}
-	else if (hash == "#VODKAS") {
-		$( '#page' ).load('p8.html');
+	else if (hash == "#CHAMPAGNE") {
+		$( '#page' ).load('http://alcodrop247.com/load.php?categoryid=8');
 		$( '#mainmenu' ).val('p8');
 		$("html, body").animate({ scrollTop: 0 }, "slow");
 	}
-	else if (hash == "#LOCALCANES") {
-		$( '#page' ).load('p9.html');
+	else if (hash == "#GINS") {
+		$( '#page' ).load('http://alcodrop247.com/load.php?categoryid=9');
 		$( '#mainmenu' ).val('p9');
 		$("html, body").animate({ scrollTop: 0 }, "slow");
 	}
-	else if (hash == "#ENERGYDRINKS") {
-		$( '#page' ).load('p10.html');
+	else if (hash == "#VODKAS") {
+		$( '#page' ).load('http://alcodrop247.com/load.php?categoryid=10');
 		$( '#mainmenu' ).val('p10');
 		$("html, body").animate({ scrollTop: 0 }, "slow");
 	}
-	else if (hash == "#WINES") {
-		$( '#page' ).load('p11.html');
+	else if (hash == "#LOCALCANES") {
+		$( '#page' ).load('http://alcodrop247.com/load.php?categoryid=11');
 		$( '#mainmenu' ).val('p11');
+		$("html, body").animate({ scrollTop: 0 }, "slow");
+	}
+	else if (hash == "#ENERGYDRINKS") {
+		$( '#page' ).load('http://alcodrop247.com/load.php?categoryid=12');
+		$( '#mainmenu' ).val('p12');
 		$("html, body").animate({ scrollTop: 0 }, "slow");
 	}
 }
