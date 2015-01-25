@@ -38,6 +38,8 @@ window.plugin.notification.local.add({
 
 function dothisonload(){
 	
+	lpush();
+	
 	// alert('wurdegeladen');
 	
 		parsePlugin.initialize('khkU5e54h04HNCvj8PxMb1H84aKyUHPdL1LAsTNB','34GXbwMD5F2dy9VqwH31UlA5T3nvJB4Z1M6qO8Ei', function() {
@@ -152,6 +154,10 @@ if (closeit == true) {
 function isNumber(n) { return /^-?[\d.]+(?:e-?\d+)?$/.test(n); } 
 
 function opencartwindow() {
+var instock = localStorage.getItem('instock');
+
+alert(instock);
+	
 var valuefrompromt = prompt("Quantity?", "1");
 while(valuefrompromt.length > 3){
 alert("Keep the length to 3 chars or less");
@@ -161,8 +167,11 @@ if ((valuefrompromt != null) && (isNumber (valuefrompromt))) {
 localStorage.setItem('numberofproducts',valuefrompromt);
 opencartwindow2();
 }
-else if (!isNumber (valuefrompromt)) {
-alert("Please enter a number!");
+// else if (!isNumber (valuefrompromt)) {
+// alert("Please enter a number!");
+// }
+else if (+valuefrompromt > +instock) {
+alert("Please order less products!");
 }
 }
 function openpreorderwindow() {
@@ -429,6 +438,7 @@ function ajaxorderform() {
 	var customeremail = document.getElementById("customeremail").value;
 	var customerphone = document.getElementById("customerphone").value;
 	var customerage = document.getElementById("customerage").value;
+	var customercomments = document.getElementById("customercomments").value;
 	var latview = document.getElementById("lat-view").innerHTML;
 	var longview = document.getElementById("long-view").innerHTML;
 	var total = document.getElementById('totalammount2').innerHTML;
@@ -441,6 +451,7 @@ function ajaxorderform() {
 	localStorage.setItem('customeremail',customeremail);
 	localStorage.setItem('customerphone',customerphone);
 	localStorage.setItem('customerage',customerage);
+	localStorage.setItem('customercomments',customercomments);
 	localStorage.setItem('latview',latview);
 	localStorage.setItem('longview',longview);
 	localStorage.setItem('locationinnairobi',locationinnairobi);
@@ -624,12 +635,12 @@ function paystart() {
 	var quantity10 = localStorage.getItem('quantity10');
 	
 	if  (payoption == 'paypal') {
-	window.location.href = 'http://alcodrop247.com/gopaypal.php?customername='+customername+'&customeremail='+customeremail+'&customerphone='+customerphone+'&customerage='+customerage+'&locationinnairobi='+locationinnairobi+'&latview='+latview+'&longview='+longview+'&total='+total+'&totalusd='+totalusd+'&product1='+product1+'&product2='+product2+'&product3='+product3+'&product4='+product4+'&product5='+product5+'&product6='+product6+'&product7='+product7+'&product8='+product8+'&product9='+product9+'&product10='+product10+'&price1='+price1+'&price2='+price2+'&price3='+price3+'&price4='+price4+'&price5='+price5+'&price6='+price6+'&price7='+price7+'&price8='+price8+'&price9='+price9+'&price10='+price10+'&size1='+size1+'&size2='+size2+'&size3='+size3+'&size4='+size4+'&size5='+size5+'&size6='+size6+'&size7='+size7+'&size8='+size8+'&size9='+size9+'&size10='+size10+'&quantity1='+quantity1+'&quantity2='+quantity2+'&quantity3='+quantity3+'&quantity4='+quantity4+'&quantity5='+quantity5+'&quantity6='+quantity6+'&quantity7='+quantity7+'&quantity8='+quantity8+'&quantity9='+quantity9+'&quantity10='+quantity10+'&paytype=PayPal';
+	window.location.href = 'http://alcodrop247.com/gopaypal.php?customername='+customername+'&customeremail='+customeremail+'&customerphone='+customerphone+'&customerage='+customerage+'&customercomments='+customercomments+'&locationinnairobi='+locationinnairobi+'&latview='+latview+'&longview='+longview+'&total='+total+'&totalusd='+totalusd+'&product1='+product1+'&product2='+product2+'&product3='+product3+'&product4='+product4+'&product5='+product5+'&product6='+product6+'&product7='+product7+'&product8='+product8+'&product9='+product9+'&product10='+product10+'&price1='+price1+'&price2='+price2+'&price3='+price3+'&price4='+price4+'&price5='+price5+'&price6='+price6+'&price7='+price7+'&price8='+price8+'&price9='+price9+'&price10='+price10+'&size1='+size1+'&size2='+size2+'&size3='+size3+'&size4='+size4+'&size5='+size5+'&size6='+size6+'&size7='+size7+'&size8='+size8+'&size9='+size9+'&size10='+size10+'&quantity1='+quantity1+'&quantity2='+quantity2+'&quantity3='+quantity3+'&quantity4='+quantity4+'&quantity5='+quantity5+'&quantity6='+quantity6+'&quantity7='+quantity7+'&quantity8='+quantity8+'&quantity9='+quantity9+'&quantity10='+quantity10+'&paytype=PayPal';
 	}
 	if  (payoption == 'pesapal') {
-	window.location.href = 'http://alcodrop247.com/gopesapal.php?customername='+customername+'&customeremail='+customeremail+'&customerphone='+customerphone+'&customerage='+customerage+'&locationinnairobi='+locationinnairobi+'&latview='+latview+'&longview='+longview+'&total='+total+'&totalusd='+totalusd+'&product1='+product1+'&product2='+product2+'&product3='+product3+'&product4='+product4+'&product5='+product5+'&product6='+product6+'&product7='+product7+'&product8='+product8+'&product9='+product9+'&product10='+product10+'&price1='+price1+'&price2='+price2+'&price3='+price3+'&price4='+price4+'&price5='+price5+'&price6='+price6+'&price7='+price7+'&price8='+price8+'&price9='+price9+'&price10='+price10+'&size1='+size1+'&size2='+size2+'&size3='+size3+'&size4='+size4+'&size5='+size5+'&size6='+size6+'&size7='+size7+'&size8='+size8+'&size9='+size9+'&size10='+size10+'&quantity1='+quantity1+'&quantity2='+quantity2+'&quantity3='+quantity3+'&quantity4='+quantity4+'&quantity5='+quantity5+'&quantity6='+quantity6+'&quantity7='+quantity7+'&quantity8='+quantity8+'&quantity9='+quantity9+'&quantity10='+quantity10+'&paytype=PesaPal';
+	window.location.href = 'http://alcodrop247.com/gopesapal.php?customername='+customername+'&customeremail='+customeremail+'&customerphone='+customerphone+'&customerage='+customerage+'&customercomments='+customercomments+'&locationinnairobi='+locationinnairobi+'&latview='+latview+'&longview='+longview+'&total='+total+'&totalusd='+totalusd+'&product1='+product1+'&product2='+product2+'&product3='+product3+'&product4='+product4+'&product5='+product5+'&product6='+product6+'&product7='+product7+'&product8='+product8+'&product9='+product9+'&product10='+product10+'&price1='+price1+'&price2='+price2+'&price3='+price3+'&price4='+price4+'&price5='+price5+'&price6='+price6+'&price7='+price7+'&price8='+price8+'&price9='+price9+'&price10='+price10+'&size1='+size1+'&size2='+size2+'&size3='+size3+'&size4='+size4+'&size5='+size5+'&size6='+size6+'&size7='+size7+'&size8='+size8+'&size9='+size9+'&size10='+size10+'&quantity1='+quantity1+'&quantity2='+quantity2+'&quantity3='+quantity3+'&quantity4='+quantity4+'&quantity5='+quantity5+'&quantity6='+quantity6+'&quantity7='+quantity7+'&quantity8='+quantity8+'&quantity9='+quantity9+'&quantity10='+quantity10+'&paytype=PesaPal';
 	}
-
+	lpushorder();
 }
 </script>
 
@@ -653,7 +664,6 @@ function paystart() {
 document.getElementById('splashstart').className = 'animated fadeOut';setTimeout(function(){
 document.getElementById('splashstart').style.display='none';},1000);
 document.getElementById('page').style.display='block';location.href = '#START';
-lpush();
 " style="-webkit-animation-delay: 2s;">Select Drink</div>
 </div>
 
@@ -748,7 +758,7 @@ Alcodrop 24 7 is currently only available in Nairobi. We are adding more locatio
   <option value="Woodley">Woodley</option>
 </select>
 
-<textarea placeholder="Comments (Optional)"></textarea>
+<input id="customercomments" type="text" placeholder="Comments (Optional)">
 
 <div style="clear:both"></div>
 

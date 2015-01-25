@@ -161,7 +161,7 @@ body {
 .paymentprovider:hover {
 	border: 2px solid #000;
 }
-#proceedorderform1 input, #proceedorderform1 select {
+#proceedorderform1 input, #proceedorderform1 select, #proceedorderform1 textarea {
 	background-color: #FFF;
 	width: 80%;
 	padding-top: 7px;
