@@ -17,11 +17,20 @@
 function onDeviceReady() {
 }
 
+function lpushorder() {
+window.plugin.notification.local.add({
+    id:         1,
+    message:    'We recieved your order! Thanks for choosing AlcoDrop 24 7',
+    title:      'Order Recieved',
+    autoCancel: true,
+    ongoing:    false
+});
+}
 function lpush() {
 window.plugin.notification.local.add({
     id:         1,
-    message:    'We recieved your order! Thank you for chosing AlcoDrop 24 7',
-    title:      'Order Recieved',
+    message:    'Thanks for choosing AlcoDrop 24 7',
+    title:      'Welcome',
     autoCancel: true,
     ongoing:    false
 });
@@ -155,6 +164,13 @@ opencartwindow2();
 else if (!isNumber (valuefrompromt)) {
 alert("Please enter a number!");
 }
+}
+function openpreorderwindow() {
+var notifyproduct = localStorage.getItem('product');
+var valuefrompromtname = prompt("Name?", "");
+var valuefrompromtphone = prompt("Phone?", "");
+var valuefrompromtemail = prompt("E-Mail?", "");
+alert('Thank you ' + valuefrompromtname + ', we will notifiy you when ' + notifyproduct + ' becomes available.');
 }
 function opencartwindow2() {
 	
