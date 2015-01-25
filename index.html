@@ -154,24 +154,17 @@ if (closeit == true) {
 function isNumber(n) { return /^-?[\d.]+(?:e-?\d+)?$/.test(n); } 
 
 function opencartwindow() {
-var instock = localStorage.getItem('instock');
-
-alert(instock);
-	
 var valuefrompromt = prompt("Quantity?", "1");
 while(valuefrompromt.length > 3){
 alert("Keep the length to 3 chars or less");
 valuefrompromt = prompt("Quantity?", "1");
 }
-if ((valuefrompromt != null) && (isNumber (valuefrompromt))) {
+if ((valuefrompromt != 0) && (isNumber (valuefrompromt))) {
 localStorage.setItem('numberofproducts',valuefrompromt);
 opencartwindow2();
 }
-// else if (!isNumber (valuefrompromt)) {
-// alert("Please enter a number!");
-// }
-else if (+valuefrompromt > +instock) {
-alert("Please order less products!");
+else if (!isNumber (valuefrompromt)) {
+alert("Please enter a number!");
 }
 }
 function openpreorderwindow() {
@@ -182,6 +175,14 @@ var valuefrompromtemail = prompt("E-Mail?", "");
 alert('Thank you ' + valuefrompromtname + ', we will notifiy you when ' + notifyproduct + ' becomes available.');
 }
 function opencartwindow2() {
+	
+var howmanycompare = localStorage.getItem('numberofproducts');
+var instock = localStorage.getItem('instock');
+	
+if (+howmanycompare > +instock) {
+alert("We do not have enough products in stock. Please order "+instock+" or less. Thank you.");
+return;
+}
 	
 	$("html, body").animate({ scrollTop: 0 }, "slow");
 	
