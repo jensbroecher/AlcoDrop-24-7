@@ -14,7 +14,8 @@
 
 <script>
 
-function onDeviceReady() {
+function onDeviceReady() {mini
+
 }
 
 function lpushorder() {
@@ -373,11 +374,11 @@ window.plugin.notification.local.add({
             document.getElementById("chooseareainnairobi").value = localStorage['chooseareainnairobi'];
     }
 
-    $('#mainmenu').on('change', function() {
+ //  $('#mainmenu').on('change', function() {
  // alert( this.value ); // or $(this).val()
-  loadthis = this.value;
-  ajaxload();
-	});
+ // loadthis = this.value;
+ // ajaxload();
+ //});
 	
 	$( "#page" ).load("start.html");
 	
@@ -399,11 +400,11 @@ $( "#page" ).load(loadthis+".html");
 
 function proceedwithorder1() {
 	var currentotal = document.getElementById('totalammount2').innerHTML;
-	var requiredtotal = 1;
+	var requiredtotal = 1000;
 	navigator.geolocation.getCurrentPosition(disp);
 	
 	if (+currentotal < requiredtotal) {
-        alert("Sorry, minimum order price not reached! Order for 1500 KES and above and enjoy free delivery!");
+        alert("Sorry, minimum order price not reached! Order for 1000 KES and above and enjoy free delivery!");
         return false;
     }
 	else {
@@ -660,7 +661,7 @@ function paystart() {
 <div id="splashstart" style="text-align:center; position:absolute; width:100%; height:100%; background-image: url(barbg.jpg); background-repeat: no-repeat; background-position: center top; background-size: 100% 100% !important; background-color:#000; z-index:1000;">
 <br><br><br><br>
 <img src="drop.png" class="animated fadeIn" width="60%" style="margin-left:-10px; -webkit-animation-delay: 2s;">
-<div id="warning" class="animated fadeIn" style="-webkit-animation-delay: 2s;">Alcohol is not for sale to persons under 18. By using the app / website you accept our terms and conditions and privacy policy.</div>
+<div id="warning" class="animated fadeIn" style="-webkit-animation-delay: 2s;" onClick="document.getElementById('tnc').style.display='block';">Alcohol is not for sale to persons under 18. By using the app / website you accept our <span style="text-decoration:underline;">terms and conditions and privacy policy</span>.</div>
 <div id="selectdrink" class="animated fadeIn" onclick="
 document.getElementById('splashstart').className = 'animated fadeOut';setTimeout(function(){
 document.getElementById('splashstart').style.display='none';},1000);
@@ -913,7 +914,7 @@ I have read and agreed to the <span onClick="document.getElementById('tnc').styl
 <div id="mainholder">
 
 <div id="navigation">
-<img src="logoinapp.png" onClick="$( '#page' ).load('start.html');$( '#mainmenu' ).val('start');location.href = '#START';">
+<img src="logoinapp.png" onClick="$( '#mainmenu' ).val('start');location.href = '#START';">
 <select id="mainmenu" onchange="optionCheck()">
 <option value="start">Drinks selection:</option>
 <option value="p1">IMPORTED WHISKIES</option>
