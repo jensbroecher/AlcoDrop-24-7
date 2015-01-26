@@ -169,11 +169,21 @@ alert("Please enter a number!");
 }
 }
 function openpreorderwindow() {
-var notifyproduct = localStorage.getItem('product');
-var valuefrompromtname = prompt("Name?", "");
-var valuefrompromtphone = prompt("Phone?", "");
-var valuefrompromtemail = prompt("E-Mail?", "");
+notifyproduct = localStorage.getItem('product');
+valuefrompromtname = prompt("Name?", "");
+if(!valuefrompromtname){
+   alert('Please enter your name.');
+   return;
+ };
+valuefrompromtphone = prompt("Phone?", "");
+valuefrompromtemail = prompt("E-Mail?", "");
+
+xmlhttp=new XMLHttpRequest();
+xmlhttp.open("GET","http://alcodrop247.com/preorder.php?name=" + valuefrompromtname + "&phone=" + valuefrompromtphone + "&email=" + valuefrompromtemail + "&product=" + notifyproduct + "",true);
+xmlhttp.send();
+		
 alert('Thank you ' + valuefrompromtname + ', we will notifiy you when ' + notifyproduct + ' becomes available.');
+
 }
 function opencartwindow2() {
 	
